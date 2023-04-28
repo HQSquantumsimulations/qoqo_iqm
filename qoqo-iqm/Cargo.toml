@@ -30,7 +30,7 @@ roqoqo-iqm = {version="0.1", path="../roqoqo-iqm"}
 
 qoqo_calculator = {version="1.1"}
 qoqo_calculator_pyo3 = {version="1.1", default-features=false}
-qoqo = {version="1.3", default-features=false}
+qoqo = {version="1.4", default-features=false}
 roqoqo = {version="1.3"}
 
 serde = { version = "1.0", features = ["derive"] }
