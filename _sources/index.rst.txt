@@ -6,15 +6,7 @@ The qoqo_iqm/roqoqo-iqm packages provide backends for qoqo/roqoqo that allow the
 IQM endpoints (simulators or hardware) are accessed via a web-interface.
 To run circuits with these backends the user needs a valid access token for the IQM services and an internet connection.
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
-   modules
-
-
-
 Documentation Index
-==================
+===================
 
 * :ref:`genindex`

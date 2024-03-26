@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="English" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>qoqo.QuantumProgram &mdash; qoqo-iqm 0.7.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=a7c2b583"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            qoqo-iqm
+          </a>
+              <div class="version">
+                0.7.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">qoqo.QuantumProgram</a><ul>
+<li><a class="reference internal" href="#qoqo.QuantumProgram"><code class="docutils literal notranslate"><span class="pre">QuantumProgram</span></code></a><ul>
+<li><a class="reference internal" href="#qoqo.QuantumProgram.__init__"><code class="docutils literal notranslate"><span class="pre">QuantumProgram.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.QuantumProgram.current_version"><code class="docutils literal notranslate"><span class="pre">QuantumProgram.current_version()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.QuantumProgram.from_bincode"><code class="docutils literal notranslate"><span class="pre">QuantumProgram.from_bincode()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.QuantumProgram.from_json"><code class="docutils literal notranslate"><span class="pre">QuantumProgram.from_json()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.QuantumProgram.input_parameter_names"><code class="docutils literal notranslate"><span class="pre">QuantumProgram.input_parameter_names()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.QuantumProgram.json_schema"><code class="docutils literal notranslate"><span class="pre">QuantumProgram.json_schema()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.QuantumProgram.measurement"><code class="docutils literal notranslate"><span class="pre">QuantumProgram.measurement()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.QuantumProgram.min_supported_version"><code class="docutils literal notranslate"><span class="pre">QuantumProgram.min_supported_version()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.QuantumProgram.run"><code class="docutils literal notranslate"><span class="pre">QuantumProgram.run()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.QuantumProgram.run_registers"><code class="docutils literal notranslate"><span class="pre">QuantumProgram.run_registers()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.QuantumProgram.to_bincode"><code class="docutils literal notranslate"><span class="pre">QuantumProgram.to_bincode()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.QuantumProgram.to_json"><code class="docutils literal notranslate"><span class="pre">QuantumProgram.to_json()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">qoqo-iqm</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">qoqo.QuantumProgram</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/generated/generated/qoqo.QuantumProgram.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="qoqo-quantumprogram">
+<h1>qoqo.QuantumProgram<a class="headerlink" href="#qoqo-quantumprogram" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="qoqo.QuantumProgram">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qoqo.</span></span><span class="sig-name descname"><span class="pre">QuantumProgram</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">measurement</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_parameter_names</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.QuantumProgram" title="Link to this definition"></a></dt>
+<dd><p>Represents a quantum program evaluating measurements based on a one or more free float parameters.</p>
+<p>The main use of QuantumProgram is to contain a Measurements implementing [crate::measurements::Measure]
+that measures expectation values or output registers of [crate::Circuit] quantum circuits that contain
+symbolic parameters. Circuit with symbolic parameters can not be simulated or executed on real hardware.
+The symbolic parameters need to be replaced with real floating point numbers first.
+A QuantumProgram contains a list of the free parameters (<cite>input_parameter_names</cite>) and can automatically
+replace the parameters with its <cite>run</cite> methods and return the result.</p>
+<p>The QuantumProgram should correspond as closely as possible to a normal multi-parameter function
+in classical computing that can be called with a set of parameters and returns a result.
+It is the intended way to interface between normal program code and roqoqo based quantum programs.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.QuantumProgram.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.QuantumProgram.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#qoqo.QuantumProgram.__init__" title="qoqo.QuantumProgram.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../qoqo.html#qoqo.QuantumProgram.current_version" title="qoqo.QuantumProgram.current_version"><code class="xref py py-obj docutils literal notranslate"><span class="pre">current_version</span></code></a>()</p></td>
+<td><p>Returns the current version of the qoqo library .</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../qoqo.html#qoqo.QuantumProgram.from_bincode" title="qoqo.QuantumProgram.from_bincode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_bincode</span></code></a>(input)</p></td>
+<td><p>Convert the bincode representation of the QuantumProgram to a QuantumProgram using the [bincode] crate.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../qoqo.html#qoqo.QuantumProgram.from_json" title="qoqo.QuantumProgram.from_json"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_json</span></code></a>(input)</p></td>
+<td><p>Convert the json representation of a QuantumProgram to a QuantumProgram.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../qoqo.html#qoqo.QuantumProgram.input_parameter_names" title="qoqo.QuantumProgram.input_parameter_names"><code class="xref py py-obj docutils literal notranslate"><span class="pre">input_parameter_names</span></code></a>()</p></td>
+<td><p>Returns the input_parameter_names attribute of the qoqo QuantumProgram.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../qoqo.html#qoqo.QuantumProgram.json_schema" title="qoqo.QuantumProgram.json_schema"><code class="xref py py-obj docutils literal notranslate"><span class="pre">json_schema</span></code></a>()</p></td>
+<td><p>Return the JsonSchema for the json serialisation of the class.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../qoqo.html#qoqo.QuantumProgram.measurement" title="qoqo.QuantumProgram.measurement"><code class="xref py py-obj docutils literal notranslate"><span class="pre">measurement</span></code></a>()</p></td>
+<td><p>Returns the measurement attribute of the QuantumProgram as Python object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../qoqo.html#qoqo.QuantumProgram.min_supported_version" title="qoqo.QuantumProgram.min_supported_version"><code class="xref py py-obj docutils literal notranslate"><span class="pre">min_supported_version</span></code></a>()</p></td>
+<td><p>Return the minimum version of qoqo that supports this object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../qoqo.html#qoqo.QuantumProgram.run" title="qoqo.QuantumProgram.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>(backend[, parameters])</p></td>
+<td><p>Runs the QuantumProgram and returns expectation values.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../qoqo.html#qoqo.QuantumProgram.run_registers" title="qoqo.QuantumProgram.run_registers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run_registers</span></code></a>(backend[, parameters])</p></td>
+<td><p>Runs the QuantumProgram and returns the classical registers of the quantum program.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../qoqo.html#qoqo.QuantumProgram.to_bincode" title="qoqo.QuantumProgram.to_bincode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_bincode</span></code></a>()</p></td>
+<td><p>Return the bincode representation of the QuantumProgram using the [bincode] crate.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../qoqo.html#qoqo.QuantumProgram.to_json" title="qoqo.QuantumProgram.to_json"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_json</span></code></a>()</p></td>
+<td><p>Return the json representation of the QuantumProgram.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.QuantumProgram.current_version">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">current_version</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.QuantumProgram.current_version" title="Link to this definition"></a></dt>
+<dd><p>Returns the current version of the qoqo library .</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The current version of the library.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.QuantumProgram.from_bincode">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_bincode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.QuantumProgram.from_bincode" title="Link to this definition"></a></dt>
+<dd><p>Convert the bincode representation of the QuantumProgram to a QuantumProgram using the [bincode] crate.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>input</strong> (<em>ByteArray</em>) -- The serialized QuantumProgram (in [bincode] form).</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The deserialized QuantumProgram.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="../qoqo.html#qoqo.QuantumProgram" title="qoqo.QuantumProgram">QuantumProgram</a></p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>TypeError</strong> -- Input cannot be converted to byte array.</p></li>
+<li><p><strong>ValueError</strong> -- Input cannot be deserialized to QuantumProgram.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.QuantumProgram.from_json">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.QuantumProgram.from_json" title="Link to this definition"></a></dt>
+<dd><p>Convert the json representation of a QuantumProgram to a QuantumProgram.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>input</strong> (<em>str</em>) -- The serialized QuantumProgram in json form.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The deserialized QuantumProgram.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="../qoqo.html#qoqo.QuantumProgram" title="qoqo.QuantumProgram">QuantumProgram</a></p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> -- Input cannot be deserialized to QuantumProgram.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.QuantumProgram.input_parameter_names">
+<span class="sig-name descname"><span class="pre">input_parameter_names</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.QuantumProgram.input_parameter_names" title="Link to this definition"></a></dt>
+<dd><p>Returns the input_parameter_names attribute of the qoqo QuantumProgram.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List of input parameter names.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.QuantumProgram.json_schema">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">json_schema</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.QuantumProgram.json_schema" title="Link to this definition"></a></dt>
+<dd><p>Return the JsonSchema for the json serialisation of the class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The json schema serialized to json</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.QuantumProgram.measurement">
+<span class="sig-name descname"><span class="pre">measurement</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.QuantumProgram.measurement" title="Link to this definition"></a></dt>
+<dd><p>Returns the measurement attribute of the QuantumProgram as Python object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>PyObject corresponding to the qoqo measurement type of the QuantumProgram,
+i.e. PauliZProduct, CheatedPauliZProduct, Cheated or ClassicalRegister.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.QuantumProgram.min_supported_version">
+<span class="sig-name descname"><span class="pre">min_supported_version</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.QuantumProgram.min_supported_version" title="Link to this definition"></a></dt>
+<dd><p>Return the minimum version of qoqo that supports this object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The minimum version of the qoqo library to deserialize this object.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.QuantumProgram.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">backend</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.QuantumProgram.run" title="Link to this definition"></a></dt>
+<dd><p>Runs the QuantumProgram and returns expectation values.</p>
+<p>Runs the quantum programm for a given set of parameters passed in the same order as the parameters
+listed in <cite>input_parameter_names</cite> and returns expectation values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>backend</strong> (<em>Backend</em>) -- The backend the program is executed on.</p></li>
+<li><p><strong>parameters</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>float</em><em>]</em>) -- List of float  parameters of the function call in order of <cite>input_parameter_names</cite></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.QuantumProgram.run_registers">
+<span class="sig-name descname"><span class="pre">run_registers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">backend</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.QuantumProgram.run_registers" title="Link to this definition"></a></dt>
+<dd><p>Runs the QuantumProgram and returns the classical registers of the quantum program.</p>
+<p>Runs the quantum programm for a given set of parameters passed in the same order as the parameters
+listed in <cite>input_parameter_names</cite> and returns the classical register output.
+The classical registers usually contain a record of measurement values for the repeated execution
+of a [crate::Circuit] quantum circuit for real quantum hardware
+or the readout of the statevector or the density matrix for simulators.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>backend</strong> (<em>Backend</em>) -- The backend the program is executed on.</p></li>
+<li><p><strong>parameters</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>float</em><em>]</em>) -- List of float  parameters of the function call in order of <cite>input_parameter_names</cite></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.QuantumProgram.to_bincode">
+<span class="sig-name descname"><span class="pre">to_bincode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.QuantumProgram.to_bincode" title="Link to this definition"></a></dt>
+<dd><p>Return the bincode representation of the QuantumProgram using the [bincode] crate.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The serialized QuantumProgram (in [bincode] form).</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>ByteArray</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ValueError</strong> -- Cannot serialize QuantumProgram to bytes.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.QuantumProgram.to_json">
+<span class="sig-name descname"><span class="pre">to_json</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.QuantumProgram.to_json" title="Link to this definition"></a></dt>
+<dd><p>Return the json representation of the QuantumProgram.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The serialized form of QuantumProgram.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ValueError</strong> -- Cannot serialize QuantumProgram to json.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, HQS Quantum Simulations GmbH.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+qoqo.operations
+===============
+
+.. automodule:: qoqo.operations
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      BeamSplitter
+      Bogoliubov
+      CNOT
+      ComplexPMInteraction
+      ControlledControlledPauliZ
+      ControlledControlledPhaseShift
+      ControlledPauliY
+      ControlledPauliZ
+      ControlledPhaseShift
+      ControlledRotateX
+      ControlledRotateXY
+      DefinitionBit
+      DefinitionComplex
+      DefinitionFloat
+      DefinitionUsize
+      EchoCrossResonance
+      FSwap
+      Fsim
+      GPi
+      GPi2
+      GivensRotation
+      GivensRotationLittleEndian
+      Hadamard
+      ISwap
+      Identity
+      InputBit
+      InputSymbolic
+      InvSqrtISwap
+      InvSqrtPauliX
+      MeasureQubit
+      MolmerSorensenXX
+      MultiQubitMS
+      MultiQubitZZ
+      PMInteraction
+      PauliX
+      PauliY
+      PauliZ
+      PhaseDisplacement
+      PhaseShift
+      PhaseShiftState0
+      PhaseShiftState1
+      PhaseShiftedControlledPhase
+      PhaseShiftedControlledZ
+      PhotonDetection
+      PragmaActiveReset
+      PragmaAnnotatedOp
+      PragmaBoostNoise
+      PragmaChangeDevice
+      PragmaConditional
+      PragmaControlledCircuit
+      PragmaDamping
+      PragmaDephasing
+      PragmaDepolarising
+      PragmaGeneralNoise
+      PragmaGetDensityMatrix
+      PragmaGetOccupationProbability
+      PragmaGetPauliProduct
+      PragmaGetStateVector
+      PragmaGlobalPhase
+      PragmaLoop
+      PragmaOverrotation
+      PragmaRandomNoise
+      PragmaRepeatGate
+      PragmaRepeatedMeasurement
+      PragmaSetDensityMatrix
+      PragmaSetNumberOfMeasurements
+      PragmaSetStateVector
+      PragmaSleep
+      PragmaStartDecompositionBlock
+      PragmaStopDecompositionBlock
+      PragmaStopParallelBlock
+      Qsim
+      RotateAroundSphericalAxis
+      RotateX
+      RotateXY
+      RotateY
+      RotateZ
+      SGate
+      SWAP
+      SingleQubitGate
+      SpinInteraction
+      SqrtISwap
+      SqrtPauliX
+      Squeezing
+      TGate
+      Toffoli
+      VariableMSXX
+      XY
+   
+   
+
+   
+   
+   
+
+
+

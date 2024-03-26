@@ -1,9 +1,9 @@
-qoqo_iqm documentation
-========================
+qoqo-iqm documentation
+==========================
 
 .. autosummary::
     :toctree: generated/
 
-    qoqo_iqm
+    qoqo-iqm
 
 
