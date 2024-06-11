@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="English" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>qoqo.measurements.CheatedPauliZProductInput &mdash; qoqo-iqm 0.9.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=269f141a"></script>
+        <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            qoqo-iqm
+          </a>
+              <div class="version">
+                0.9.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">qoqo.measurements.CheatedPauliZProductInput</a><ul>
+<li><a class="reference internal" href="#qoqo.measurements.CheatedPauliZProductInput"><code class="docutils literal notranslate"><span class="pre">CheatedPauliZProductInput</span></code></a><ul>
+<li><a class="reference internal" href="#qoqo.measurements.CheatedPauliZProductInput.__init__"><code class="docutils literal notranslate"><span class="pre">CheatedPauliZProductInput.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.measurements.CheatedPauliZProductInput.add_linear_exp_val"><code class="docutils literal notranslate"><span class="pre">CheatedPauliZProductInput.add_linear_exp_val()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.measurements.CheatedPauliZProductInput.add_pauliz_product"><code class="docutils literal notranslate"><span class="pre">CheatedPauliZProductInput.add_pauliz_product()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.measurements.CheatedPauliZProductInput.add_symbolic_exp_val"><code class="docutils literal notranslate"><span class="pre">CheatedPauliZProductInput.add_symbolic_exp_val()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.measurements.CheatedPauliZProductInput.current_version"><code class="docutils literal notranslate"><span class="pre">CheatedPauliZProductInput.current_version()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.measurements.CheatedPauliZProductInput.from_bincode"><code class="docutils literal notranslate"><span class="pre">CheatedPauliZProductInput.from_bincode()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.measurements.CheatedPauliZProductInput.from_json"><code class="docutils literal notranslate"><span class="pre">CheatedPauliZProductInput.from_json()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.measurements.CheatedPauliZProductInput.json_schema"><code class="docutils literal notranslate"><span class="pre">CheatedPauliZProductInput.json_schema()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.measurements.CheatedPauliZProductInput.min_supported_version"><code class="docutils literal notranslate"><span class="pre">CheatedPauliZProductInput.min_supported_version()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.measurements.CheatedPauliZProductInput.to_bincode"><code class="docutils literal notranslate"><span class="pre">CheatedPauliZProductInput.to_bincode()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.measurements.CheatedPauliZProductInput.to_json"><code class="docutils literal notranslate"><span class="pre">CheatedPauliZProductInput.to_json()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">qoqo-iqm</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">qoqo.measurements.CheatedPauliZProductInput</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/generated/generated/generated/qoqo.measurements.CheatedPauliZProductInput.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="qoqo-measurements-cheatedpaulizproductinput">
+<h1>qoqo.measurements.CheatedPauliZProductInput<a class="headerlink" href="#qoqo-measurements-cheatedpaulizproductinput" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="qoqo.measurements.CheatedPauliZProductInput">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qoqo.measurements.</span></span><span class="sig-name descname"><span class="pre">CheatedPauliZProductInput</span></span><a class="headerlink" href="#qoqo.measurements.CheatedPauliZProductInput" title="Link to this definition"></a></dt>
+<dd><p>Collected information for executing a cheated basis rotation measurement.</p>
+<p>The CheatedPauliZProductInput starts with just the number of qubtis and flipped measurements set.
+The pauli_poduct_qubit_masks and measured_exp_vals start empty
+and can be extended with [CheatedPauliZProductInput::add_linear_exp_val] and
+[CheatedPauliZProductInput::add_symbolic_exp_val].</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><dl class="simple">
+<dt>The new instance of CheatedPauliZProductInput with measured_exp_vals = an empty</dt><dd><p>HashMap and pauli_product_keys = an empty HashMap.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>self</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.measurements.CheatedPauliZProductInput.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.measurements.CheatedPauliZProductInput.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#qoqo.measurements.CheatedPauliZProductInput.__init__" title="qoqo.measurements.CheatedPauliZProductInput.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../qoqo.measurements.html#qoqo.measurements.CheatedPauliZProductInput.add_linear_exp_val" title="qoqo.measurements.CheatedPauliZProductInput.add_linear_exp_val"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_linear_exp_val</span></code></a>(name, linear)</p></td>
+<td><p>Add linear definition of expectation value to measurement input.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../qoqo.measurements.html#qoqo.measurements.CheatedPauliZProductInput.add_pauliz_product" title="qoqo.measurements.CheatedPauliZProductInput.add_pauliz_product"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_pauliz_product</span></code></a>(readout)</p></td>
+<td><p>Add measured Pauli product to CheatedPauliZProductInput and returns index of Pauli product.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../qoqo.measurements.html#qoqo.measurements.CheatedPauliZProductInput.add_symbolic_exp_val" title="qoqo.measurements.CheatedPauliZProductInput.add_symbolic_exp_val"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_symbolic_exp_val</span></code></a>(name, symbolic)</p></td>
+<td><p>Add symbolic definition of expectation value to measurement input.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../qoqo.measurements.html#qoqo.measurements.CheatedPauliZProductInput.current_version" title="qoqo.measurements.CheatedPauliZProductInput.current_version"><code class="xref py py-obj docutils literal notranslate"><span class="pre">current_version</span></code></a>()</p></td>
+<td><p>Returns the current version of the qoqo library .</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../qoqo.measurements.html#qoqo.measurements.CheatedPauliZProductInput.from_bincode" title="qoqo.measurements.CheatedPauliZProductInput.from_bincode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_bincode</span></code></a>(input)</p></td>
+<td><p>Convert the bincode representation of the CheatedPauliZProductInput to a CheatedPauliZProductInput using the [bincode] crate.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../qoqo.measurements.html#qoqo.measurements.CheatedPauliZProductInput.from_json" title="qoqo.measurements.CheatedPauliZProductInput.from_json"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_json</span></code></a>(json_string)</p></td>
+<td><p>Deserialize the CheatedPauliZProductInput from json form.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../qoqo.measurements.html#qoqo.measurements.CheatedPauliZProductInput.json_schema" title="qoqo.measurements.CheatedPauliZProductInput.json_schema"><code class="xref py py-obj docutils literal notranslate"><span class="pre">json_schema</span></code></a>()</p></td>
+<td><p>Return the JsonSchema for the json serialisation of the class.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../qoqo.measurements.html#qoqo.measurements.CheatedPauliZProductInput.min_supported_version" title="qoqo.measurements.CheatedPauliZProductInput.min_supported_version"><code class="xref py py-obj docutils literal notranslate"><span class="pre">min_supported_version</span></code></a>()</p></td>
+<td><p>Return the minimum version of qoqo that supports this object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../qoqo.measurements.html#qoqo.measurements.CheatedPauliZProductInput.to_bincode" title="qoqo.measurements.CheatedPauliZProductInput.to_bincode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_bincode</span></code></a>()</p></td>
+<td><p>Return the bincode representation of the CheatedPauliZProductInput using the [bincode] crate.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../qoqo.measurements.html#qoqo.measurements.CheatedPauliZProductInput.to_json" title="qoqo.measurements.CheatedPauliZProductInput.to_json"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_json</span></code></a>()</p></td>
+<td><p>Serialize the CheatedPauliZProductInput to json form.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.measurements.CheatedPauliZProductInput.add_linear_exp_val">
+<span class="sig-name descname"><span class="pre">add_linear_exp_val</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">linear</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.measurements.CheatedPauliZProductInput.add_linear_exp_val" title="Link to this definition"></a></dt>
+<dd><p>Add linear definition of expectation value to measurement input.</p>
+<p>Adds an expectation value that is defined by a linear combination
+of expectation values of Pauli products.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) -- The name of the expectation value.</p></li>
+<li><p><strong>linear</strong> (<em>Dict</em><em>[</em><em>int</em><em>, </em><em>float</em><em>]</em>) -- The linear combination of expectation values as a map between Pauli product index and coefficient.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>RuntimeError</strong> -- Failed to add linear expectation value.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.measurements.CheatedPauliZProductInput.add_pauliz_product">
+<span class="sig-name descname"><span class="pre">add_pauliz_product</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">readout</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.measurements.CheatedPauliZProductInput.add_pauliz_product" title="Link to this definition"></a></dt>
+<dd><p>Add measured Pauli product to CheatedPauliZProductInput and returns index of Pauli product.</p>
+<p>When the pauli product is already in the measurement input the function only returns
+its index.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>readout</strong> (<em>str</em>) -- The name of the readout register containing the pauli_product expectation value.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The index of the added Pauli product in the list of all Pauli products.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.measurements.CheatedPauliZProductInput.add_symbolic_exp_val">
+<span class="sig-name descname"><span class="pre">add_symbolic_exp_val</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symbolic</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.measurements.CheatedPauliZProductInput.add_symbolic_exp_val" title="Link to this definition"></a></dt>
+<dd><p>Add symbolic definition of expectation value to measurement input.</p>
+<p>Adds an expectation value that is defined by a symbolic combination
+of expectation values of Pauli products.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) -- The name of the expectation value.</p></li>
+<li><p><strong>symbolic</strong> (<em>str</em>) -- The symbolic expression for the expectation values
+given by [qoqo_calculator::CalculatorFloat].</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>RuntimeError</strong> -- Failed to add symbolic expectation value.</p>
+</dd>
+</dl>
+<p>The i-th PauliProducts are hardcoded as variables pauli_product_i
+in the string expression of CalculatorFloat.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.measurements.CheatedPauliZProductInput.current_version">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">current_version</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.measurements.CheatedPauliZProductInput.current_version" title="Link to this definition"></a></dt>
+<dd><p>Returns the current version of the qoqo library .</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The current version of the library.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.measurements.CheatedPauliZProductInput.from_bincode">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_bincode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.measurements.CheatedPauliZProductInput.from_bincode" title="Link to this definition"></a></dt>
+<dd><p>Convert the bincode representation of the CheatedPauliZProductInput to a CheatedPauliZProductInput using the [bincode] crate.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>input</strong> (<em>ByteArray</em>) -- The serialized CheatedPauliZProductInput (in [bincode] form).</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The deserialized CheatedPauliZProductInput.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="../qoqo.measurements.html#qoqo.measurements.CheatedPauliZProductInput" title="qoqo.measurements.CheatedPauliZProductInput">CheatedPauliZProductInput</a></p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>TypeError</strong> -- Input cannot be converted to byte array.</p></li>
+<li><p><strong>ValueError</strong> -- Input cannot be deserialized to CheatedPauliZProductInput.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.measurements.CheatedPauliZProductInput.from_json">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_string</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.measurements.CheatedPauliZProductInput.from_json" title="Link to this definition"></a></dt>
+<dd><p>Deserialize the CheatedPauliZProductInput from json form.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The deserialized CheatedPauliZProductInput.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="../qoqo.measurements.html#qoqo.measurements.CheatedPauliZProductInput" title="qoqo.measurements.CheatedPauliZProductInput">CheatedPauliZProductInput</a></p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>PyRuntimeError</strong> -- Cannot deserialize string to CheatedPauliZProductInput.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.measurements.CheatedPauliZProductInput.json_schema">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">json_schema</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.measurements.CheatedPauliZProductInput.json_schema" title="Link to this definition"></a></dt>
+<dd><p>Return the JsonSchema for the json serialisation of the class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The json schema serialized to json</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.measurements.CheatedPauliZProductInput.min_supported_version">
+<span class="sig-name descname"><span class="pre">min_supported_version</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.measurements.CheatedPauliZProductInput.min_supported_version" title="Link to this definition"></a></dt>
+<dd><p>Return the minimum version of qoqo that supports this object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The minimum version of the qoqo library to deserialize this object.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.measurements.CheatedPauliZProductInput.to_bincode">
+<span class="sig-name descname"><span class="pre">to_bincode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.measurements.CheatedPauliZProductInput.to_bincode" title="Link to this definition"></a></dt>
+<dd><p>Return the bincode representation of the CheatedPauliZProductInput using the [bincode] crate.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The serialized CheatedPauliZProductInput (in [bincode] form).</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>ByteArray</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ValueError</strong> -- Cannot serialize CheatedPauliZProductInput to bytes.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.measurements.CheatedPauliZProductInput.to_json">
+<span class="sig-name descname"><span class="pre">to_json</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.measurements.CheatedPauliZProductInput.to_json" title="Link to this definition"></a></dt>
+<dd><p>Serialize the CheatedPauliZProductInput to json form.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The serialized CheatedPauliZProductInput.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>PyRuntimeError</strong> -- Unexpected error serializing CheatedPauliZProductInput.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, HQS Quantum Simulations GmbH.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

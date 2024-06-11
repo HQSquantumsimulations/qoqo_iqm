@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>qoqo.measurements &mdash; qoqo-iqm 0.8.0 documentation</title>
+  <title>qoqo.measurements &mdash; qoqo-iqm 0.9.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
 
@@ -15,8 +15,8 @@
   
         <script src="../../_static/jquery.js?v=5d32c60e"></script>
         <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../../_static/documentation_options.js?v=5a53be95"></script>
-        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/documentation_options.js?v=269f141a"></script>
+        <script src="../../_static/doctools.js?v=9a2dae69"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -36,7 +36,7 @@
             qoqo-iqm
           </a>
               <div class="version">
-                0.8.0
+                0.9.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -179,6 +179,31 @@
   <section id="module-qoqo.measurements">
 <span id="qoqo-measurements"></span><h1>qoqo.measurements<a class="headerlink" href="#module-qoqo.measurements" title="Link to this heading"></a></h1>
 <p>Measurements</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#qoqo.measurements.PauliZProductInput" title="qoqo.measurements.PauliZProductInput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PauliZProductInput</span></code></a>(number_qubits, ...)</p></td>
+<td><p>Provides Necessary Information to run a [roqoqo::measurements::PauliZProduct] measurement.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#qoqo.measurements.CheatedPauliZProductInput" title="qoqo.measurements.CheatedPauliZProductInput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CheatedPauliZProductInput</span></code></a>()</p></td>
+<td><p>Collected information for executing a cheated basis rotation measurement.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#qoqo.measurements.CheatedInput" title="qoqo.measurements.CheatedInput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CheatedInput</span></code></a>(number_qubits)</p></td>
+<td><p>Provides Necessary Information to run a cheated measurement.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#qoqo.measurements.PauliZProduct" title="qoqo.measurements.PauliZProduct"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PauliZProduct</span></code></a>(constant_circuit, circuits, input)</p></td>
+<td><p>Collected information for executing a measurement of PauliZ product.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#qoqo.measurements.CheatedPauliZProduct" title="qoqo.measurements.CheatedPauliZProduct"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CheatedPauliZProduct</span></code></a>(constant_circuit, ...)</p></td>
+<td><p>Collected information for executing a cheated measurement of PauliZ product.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#qoqo.measurements.Cheated" title="qoqo.measurements.Cheated"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Cheated</span></code></a>(constant_circuit, circuits, input)</p></td>
+<td><p>Collected information for executing a cheated measurement.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#qoqo.measurements.ClassicalRegister" title="qoqo.measurements.ClassicalRegister"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ClassicalRegister</span></code></a>(constant_circuit, circuits)</p></td>
+<td><p>Collected information for executing a classical register.</p></td>
+</tr>
+</tbody>
+</table>
 <p class="rubric">Classes</p>
 <table class="autosummary longtable docutils align-default">
 <tbody>
@@ -209,6 +234,21 @@
 <dt class="sig sig-object py" id="qoqo.measurements.Cheated">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qoqo.measurements.</span></span><span class="sig-name descname"><span class="pre">Cheated</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">constant_circuit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">circuits</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.measurements.Cheated" title="Link to this definition"></a></dt>
 <dd><p>Collected information for executing a cheated measurement.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>constant_circuit</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../qoqo.html#qoqo.Circuit" title="qoqo.Circuit"><em>Circuit</em></a><em>]</em>) -- The constant Circuit that is executed before each Circuit in circuits.</p></li>
+<li><p><strong>circuits</strong> (<em>List</em><em>[</em><a class="reference internal" href="../qoqo.html#qoqo.Circuit" title="qoqo.Circuit"><em>Circuit</em></a><em>]</em>) -- The collection of quantum circuits executed for the measurement.</p></li>
+<li><p><strong>input</strong> (<a class="reference internal" href="#qoqo.measurements.CheatedInput" title="qoqo.measurements.CheatedInput"><em>CheatedInput</em></a>) -- The additional input information required for measurement.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The new measurement.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#qoqo.measurements.Cheated" title="qoqo.measurements.Cheated">Cheated</a></p>
+</dd>
+</dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="qoqo.measurements.Cheated.circuits">
 <span class="sig-name descname"><span class="pre">circuits</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.measurements.Cheated.circuits" title="Link to this definition"></a></dt>
@@ -218,7 +258,7 @@
 <dd class="field-odd"><p>The quantum circuits.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>list[<a class="reference internal" href="../qoqo.html#qoqo.Circuit" title="qoqo.Circuit">Circuit</a>]</p>
+<dd class="field-even"><p>List[<a class="reference internal" href="../qoqo.html#qoqo.Circuit" title="qoqo.Circuit">Circuit</a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -258,16 +298,16 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>input_bit_registers</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>Union</em><em>[</em><em>list</em><em>[</em><em>list</em><em>[</em><em>int</em><em>]</em><em>]</em><em>, </em><em>list</em><em>[</em><em>list</em><em>[</em><em>bool</em><em>]</em><em>]</em><em>]</em><em>]</em>) -- The classical bit registers with the register name as key.</p></li>
-<li><p><strong>float_registers</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>list</em><em>[</em><em>list</em><em>[</em><em>float</em><em>]</em><em>]</em>) -- The classical float registers as a dictionary with the register name as key.</p></li>
-<li><p><strong>complex_registers</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>list</em><em>[</em><em>list</em><em>[</em><em>complex</em><em>]</em><em>]</em>) -- The classical complex registers as a dictionary with the register name as key.</p></li>
+<li><p><strong>input_bit_registers</strong> (<em>Dict</em><em>[</em><em>str</em><em>, </em><em>Union</em><em>[</em><em>List</em><em>[</em><em>List</em><em>[</em><em>int</em><em>]</em><em>]</em><em>, </em><em>List</em><em>[</em><em>List</em><em>[</em><em>bool</em><em>]</em><em>]</em><em>]</em><em>]</em>) -- The classical bit registers with the register name as key.</p></li>
+<li><p><strong>float_registers</strong> (<em>Dict</em><em>[</em><em>str</em><em>, </em><em>List</em><em>[</em><em>List</em><em>[</em><em>float</em><em>]</em><em>]</em><em>]</em>) -- The classical float registers as a dictionary with the register name as key.</p></li>
+<li><p><strong>complex_registers</strong> (<em>Dict</em><em>[</em><em>str</em><em>, </em><em>List</em><em>[</em><em>List</em><em>[</em><em>complex</em><em>]</em><em>]</em><em>]</em>) -- The classical complex registers as a dictionary with the register name as key.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The evaluated expectation values.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Optional[dict[str, float]</p>
+<dd class="field-odd"><p>Optional[Dict[str, float]]</p>
 </dd>
 <dt class="field-even">Raises<span class="colon">:</span></dt>
 <dd class="field-even"><ul class="simple">
@@ -380,7 +420,7 @@
 <dd><p>Return copy of Measurement with symbolic parameters replaced.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>substituted_parameters</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>float</em><em>]</em>) -- The dictionary containing the substitutions to use in the Circuit.</p>
+<dd class="field-odd"><p><strong>substituted_parameters</strong> (<em>Dict</em><em>[</em><em>str</em><em>, </em><em>float</em><em>]</em>) -- The dictionary containing the substitutions to use in the Circuit.</p>
 </dd>
 <dt class="field-even">Raises<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>RuntimeError</strong> -- Error substituting symbolic parameters.</p>
@@ -428,6 +468,25 @@
 <dt class="sig sig-object py" id="qoqo.measurements.CheatedInput">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qoqo.measurements.</span></span><span class="sig-name descname"><span class="pre">CheatedInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number_qubits</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.measurements.CheatedInput" title="Link to this definition"></a></dt>
 <dd><p>Provides Necessary Information to run a cheated measurement.</p>
+<p>The CheatedInput stores the number of qubits that are measured
+and a dictionary mapping expectation value names to operators on the Hilbert space
+of the qubits. The operators are represented by sparse lists of non-zero entry triples
+of an operator matrix.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>number_qubits</strong> (<em>int</em>) -- The number of qubits in the PauliZProduct measurement.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>The new instance of CheatedInput with the specified number of qubits in input,</dt><dd><p>and an empty dictionay of expectation values.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#qoqo.measurements.CheatedInput" title="qoqo.measurements.CheatedInput">CheatedInput</a></p>
+</dd>
+</dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="qoqo.measurements.CheatedInput.add_operator_exp_val">
 <span class="sig-name descname"><span class="pre">add_operator_exp_val</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">operator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">readout</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.measurements.CheatedInput.add_operator_exp_val" title="Link to this definition"></a></dt>
@@ -437,7 +496,7 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>str</em>) -- The name of the expectation value.</p></li>
-<li><p><strong>operator</strong> (<em>list</em><em>[</em><em>(</em><em>int</em><em>, </em><em>int</em><em>, </em><em>complex</em><em>)</em><em>]</em>) -- The measured operator on the Hilbert space,
+<li><p><strong>operator</strong> (<em>List</em><em>[</em><em>(</em><em>int</em><em>, </em><em>int</em><em>, </em><em>complex</em><em>)</em><em>]</em>) -- The measured operator on the Hilbert space,
 given as a list of sparse matrix entries of the form (row, col, value).</p></li>
 <li><p><strong>readout</strong> (<em>str</em>) -- The mame of the readout register that contains the density matrix or satevector.</p></li>
 </ul>
@@ -570,6 +629,21 @@ given as a list of sparse matrix entries of the form (row, col, value).</p></li>
 <dt class="sig sig-object py" id="qoqo.measurements.CheatedPauliZProduct">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qoqo.measurements.</span></span><span class="sig-name descname"><span class="pre">CheatedPauliZProduct</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">constant_circuit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">circuits</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.measurements.CheatedPauliZProduct" title="Link to this definition"></a></dt>
 <dd><p>Collected information for executing a cheated measurement of PauliZ product.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>constant_circuit</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../qoqo.html#qoqo.Circuit" title="qoqo.Circuit"><em>Circuit</em></a><em>]</em>) -- The constant Circuit that is executed before each Circuit in circuits.</p></li>
+<li><p><strong>circuits</strong> (<em>List</em><em>[</em><a class="reference internal" href="../qoqo.html#qoqo.Circuit" title="qoqo.Circuit"><em>Circuit</em></a><em>]</em>) -- The collection of quantum circuits for the separate basis rotations.</p></li>
+<li><p><strong>input</strong> (<a class="reference internal" href="#qoqo.measurements.CheatedPauliZProductInput" title="qoqo.measurements.CheatedPauliZProductInput"><em>CheatedPauliZProductInput</em></a>) -- The additional input information required for measurement.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The CheatedPauliZProduct containing the new cheated PauliZ product measurement.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>self</p>
+</dd>
+</dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="qoqo.measurements.CheatedPauliZProduct.circuits">
 <span class="sig-name descname"><span class="pre">circuits</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.measurements.CheatedPauliZProduct.circuits" title="Link to this definition"></a></dt>
@@ -579,7 +653,7 @@ given as a list of sparse matrix entries of the form (row, col, value).</p></li>
 <dd class="field-odd"><p>The quantum circuits.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>list[<a class="reference internal" href="../qoqo.html#qoqo.Circuit" title="qoqo.Circuit">Circuit</a>]</p>
+<dd class="field-even"><p>List[<a class="reference internal" href="../qoqo.html#qoqo.Circuit" title="qoqo.Circuit">Circuit</a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -619,16 +693,16 @@ given as a list of sparse matrix entries of the form (row, col, value).</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>input_bit_registers</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>Union</em><em>[</em><em>list</em><em>[</em><em>list</em><em>[</em><em>int</em><em>]</em><em>]</em><em>, </em><em>list</em><em>[</em><em>list</em><em>[</em><em>bool</em><em>]</em><em>]</em><em>]</em><em>]</em>) -- The classical bit registers with the register name as key</p></li>
-<li><p><strong>float_registers</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>list</em><em>[</em><em>list</em><em>[</em><em>float</em><em>]</em><em>]</em>) -- The classical float registers as a dictionary with the register name as key</p></li>
-<li><p><strong>complex_registers</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>list</em><em>[</em><em>list</em><em>[</em><em>complex</em><em>]</em><em>]</em>) -- The classical complex registers as a dictionary with the register name as key</p></li>
+<li><p><strong>input_bit_registers</strong> (<em>Dict</em><em>[</em><em>str</em><em>, </em><em>Union</em><em>[</em><em>List</em><em>[</em><em>List</em><em>[</em><em>int</em><em>]</em><em>]</em><em>, </em><em>List</em><em>[</em><em>List</em><em>[</em><em>bool</em><em>]</em><em>]</em><em>]</em><em>]</em>) -- The classical bit registers with the register name as key</p></li>
+<li><p><strong>float_registers</strong> (<em>Dict</em><em>[</em><em>str</em><em>, </em><em>List</em><em>[</em><em>List</em><em>[</em><em>float</em><em>]</em><em>]</em><em>]</em>) -- The classical float registers as a dictionary with the register name as key</p></li>
+<li><p><strong>complex_registers</strong> (<em>Dict</em><em>[</em><em>str</em><em>, </em><em>List</em><em>[</em><em>List</em><em>[</em><em>complex</em><em>]</em><em>]</em><em>]</em>) -- The classical complex registers as a dictionary with the register name as key</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The evaluated measurement.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Optional[dict[str, float]]</p>
+<dd class="field-odd"><p>Optional[Dict[str, float]]</p>
 </dd>
 <dt class="field-even">Raises<span class="colon">:</span></dt>
 <dd class="field-even"><ul class="simple">
@@ -741,7 +815,7 @@ given as a list of sparse matrix entries of the form (row, col, value).</p></li>
 <dd><p>Returns clone of Measurement with symbolic parameters replaced</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>substituted_parameters</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>float</em><em>]</em>) -- The dictionary containing the substitutions to use in the Circuit.</p>
+<dd class="field-odd"><p><strong>substituted_parameters</strong> (<em>Dict</em><em>[</em><em>str</em><em>, </em><em>float</em><em>]</em>) -- The dictionary containing the substitutions to use in the Circuit.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -786,6 +860,22 @@ given as a list of sparse matrix entries of the form (row, col, value).</p></li>
 <dt class="sig sig-object py" id="qoqo.measurements.CheatedPauliZProductInput">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qoqo.measurements.</span></span><span class="sig-name descname"><span class="pre">CheatedPauliZProductInput</span></span><a class="headerlink" href="#qoqo.measurements.CheatedPauliZProductInput" title="Link to this definition"></a></dt>
 <dd><p>Collected information for executing a cheated basis rotation measurement.</p>
+<p>The CheatedPauliZProductInput starts with just the number of qubtis and flipped measurements set.
+The pauli_poduct_qubit_masks and measured_exp_vals start empty
+and can be extended with [CheatedPauliZProductInput::add_linear_exp_val] and
+[CheatedPauliZProductInput::add_symbolic_exp_val].</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><dl class="simple">
+<dt>The new instance of CheatedPauliZProductInput with measured_exp_vals = an empty</dt><dd><p>HashMap and pauli_product_keys = an empty HashMap.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>self</p>
+</dd>
+</dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="qoqo.measurements.CheatedPauliZProductInput.add_linear_exp_val">
 <span class="sig-name descname"><span class="pre">add_linear_exp_val</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">linear</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.measurements.CheatedPauliZProductInput.add_linear_exp_val" title="Link to this definition"></a></dt>
@@ -796,7 +886,7 @@ of expectation values of Pauli products.</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>str</em>) -- The name of the expectation value.</p></li>
-<li><p><strong>linear</strong> (<em>dict</em><em>[</em><em>int</em><em>, </em><em>float</em><em>]</em>) -- The linear combination of expectation values as a map between Pauli product index and coefficient.</p></li>
+<li><p><strong>linear</strong> (<em>Dict</em><em>[</em><em>int</em><em>, </em><em>float</em><em>]</em>) -- The linear combination of expectation values as a map between Pauli product index and coefficient.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Raises<span class="colon">:</span></dt>
@@ -968,6 +1058,20 @@ in the string expression of CalculatorFloat.</p>
 <dt class="sig sig-object py" id="qoqo.measurements.ClassicalRegister">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qoqo.measurements.</span></span><span class="sig-name descname"><span class="pre">ClassicalRegister</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">constant_circuit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">circuits</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.measurements.ClassicalRegister" title="Link to this definition"></a></dt>
 <dd><p>Collected information for executing a classical register.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>constant_circuit</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../qoqo.html#qoqo.Circuit" title="qoqo.Circuit"><em>Circuit</em></a><em>]</em>) -- The constant Circuit that is executed before each Circuit in circuits.</p></li>
+<li><p><strong>circuits</strong> (<em>List</em><em>[</em><a class="reference internal" href="../qoqo.html#qoqo.Circuit" title="qoqo.Circuit"><em>Circuit</em></a><em>]</em>) -- The collection of quantum circuits executed for the measurement.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The new register.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#qoqo.measurements.ClassicalRegister" title="qoqo.measurements.ClassicalRegister">ClassicalRegister</a></p>
+</dd>
+</dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="qoqo.measurements.ClassicalRegister.circuits">
 <span class="sig-name descname"><span class="pre">circuits</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.measurements.ClassicalRegister.circuits" title="Link to this definition"></a></dt>
@@ -977,7 +1081,7 @@ in the string expression of CalculatorFloat.</p>
 <dd class="field-odd"><p>The quantum circuits.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>list[<a class="reference internal" href="../qoqo.html#qoqo.Circuit" title="qoqo.Circuit">Circuit</a>]</p>
+<dd class="field-even"><p>List[<a class="reference internal" href="../qoqo.html#qoqo.Circuit" title="qoqo.Circuit">Circuit</a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1098,7 +1202,7 @@ in the string expression of CalculatorFloat.</p>
 <dd><p>Return copy of Measurement with symbolic parameters replaced.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>substituted_parameters</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>float</em><em>]</em>) -- The dictionary containing the substitutions to use in the Circuit.</p>
+<dd class="field-odd"><p><strong>substituted_parameters</strong> (<em>Dict</em><em>[</em><em>str</em><em>, </em><em>float</em><em>]</em>) -- The dictionary containing the substitutions to use in the Circuit.</p>
 </dd>
 <dt class="field-even">Raises<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>RuntimeError</strong> -- Error substituting symbolic parameters.</p>
@@ -1146,6 +1250,21 @@ in the string expression of CalculatorFloat.</p>
 <dt class="sig sig-object py" id="qoqo.measurements.PauliZProduct">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qoqo.measurements.</span></span><span class="sig-name descname"><span class="pre">PauliZProduct</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">constant_circuit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">circuits</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.measurements.PauliZProduct" title="Link to this definition"></a></dt>
 <dd><p>Collected information for executing a measurement of PauliZ product.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>constant_circuit</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="../qoqo.html#qoqo.Circuit" title="qoqo.Circuit"><em>Circuit</em></a><em>]</em>) -- The constant Circuit that is executed before each Circuit in circuits.</p></li>
+<li><p><strong>circuits</strong> (<em>List</em><em>[</em><a class="reference internal" href="../qoqo.html#qoqo.Circuit" title="qoqo.Circuit"><em>Circuit</em></a><em>]</em>) -- The collection of quantum circuits for the separate basis rotations.</p></li>
+<li><p><strong>input</strong> (<a class="reference internal" href="#qoqo.measurements.PauliZProductInput" title="qoqo.measurements.PauliZProductInput"><em>PauliZProductInput</em></a>) -- The additional input information required for measurement.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The PauliZProduct containing the new PauliZ product measurement.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#qoqo.measurements.PauliZProduct" title="qoqo.measurements.PauliZProduct">PauliZProduct</a></p>
+</dd>
+</dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="qoqo.measurements.PauliZProduct.circuits">
 <span class="sig-name descname"><span class="pre">circuits</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.measurements.PauliZProduct.circuits" title="Link to this definition"></a></dt>
@@ -1155,7 +1274,7 @@ in the string expression of CalculatorFloat.</p>
 <dd class="field-odd"><p>The quantum circuits.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>list[<a class="reference internal" href="../qoqo.html#qoqo.Circuit" title="qoqo.Circuit">Circuit</a>]</p>
+<dd class="field-even"><p>List[<a class="reference internal" href="../qoqo.html#qoqo.Circuit" title="qoqo.Circuit">Circuit</a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1195,16 +1314,16 @@ in the string expression of CalculatorFloat.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>input_bit_registers</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>Union</em><em>[</em><em>list</em><em>[</em><em>list</em><em>[</em><em>int</em><em>]</em><em>]</em><em>, </em><em>list</em><em>[</em><em>list</em><em>[</em><em>bool</em><em>]</em><em>]</em><em>]</em><em>]</em>) -- The classical bit registers with the register name as key</p></li>
-<li><p><strong>float_registers</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>list</em><em>[</em><em>list</em><em>[</em><em>float</em><em>]</em><em>]</em>) -- The classical float registers as a dictionary with the register name as key</p></li>
-<li><p><strong>complex_registers</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>list</em><em>[</em><em>list</em><em>[</em><em>complex</em><em>]</em><em>]</em>) -- The classical complex registers as a dictionary with the register name as key</p></li>
+<li><p><strong>input_bit_registers</strong> (<em>Dict</em><em>[</em><em>str</em><em>, </em><em>Union</em><em>[</em><em>List</em><em>[</em><em>List</em><em>[</em><em>int</em><em>]</em><em>]</em><em>, </em><em>List</em><em>[</em><em>List</em><em>[</em><em>bool</em><em>]</em><em>]</em><em>]</em><em>]</em>) -- The classical bit registers with the register name as key</p></li>
+<li><p><strong>float_registers</strong> (<em>Dict</em><em>[</em><em>str</em><em>, </em><em>List</em><em>[</em><em>List</em><em>[</em><em>float</em><em>]</em><em>]</em><em>]</em>) -- The classical float registers as a dictionary with the register name as key</p></li>
+<li><p><strong>complex_registers</strong> (<em>Dict</em><em>[</em><em>str</em><em>, </em><em>List</em><em>[</em><em>List</em><em>[</em><em>complex</em><em>]</em><em>]</em><em>]</em>) -- The classical complex registers as a dictionary with the register name as key</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The evaluated measurement.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Optional[dict[str, float]]</p>
+<dd class="field-odd"><p>Optional[Dict[str, float]]</p>
 </dd>
 <dt class="field-even">Raises<span class="colon">:</span></dt>
 <dd class="field-even"><ul class="simple">
@@ -1317,7 +1436,7 @@ in the string expression of CalculatorFloat.</p>
 <dd><p>Return clone of Measurement with symbolic parameters replaced.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>substituted_parameters</strong> (<em>dict</em><em>[</em><em>str</em><em>, </em><em>float</em><em>]</em>) -- The dictionary containing the substitutions to use in the Circuit.</p>
+<dd class="field-odd"><p><strong>substituted_parameters</strong> (<em>Dict</em><em>[</em><em>str</em><em>, </em><em>float</em><em>]</em>) -- The dictionary containing the substitutions to use in the Circuit.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1362,6 +1481,29 @@ in the string expression of CalculatorFloat.</p>
 <dt class="sig sig-object py" id="qoqo.measurements.PauliZProductInput">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qoqo.measurements.</span></span><span class="sig-name descname"><span class="pre">PauliZProductInput</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number_qubits</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_flipped_measurement</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.measurements.PauliZProductInput" title="Link to this definition"></a></dt>
 <dd><p>Provides Necessary Information to run a [roqoqo::measurements::PauliZProduct] measurement.</p>
+<p>The PauliZProductInput starts with just the number of qubtis and flipped measurements set.
+The pauli_poduct_qubit_masks and measured_exp_vals start empty
+and can be extended with [PauliZProductInput::add_pauliz_product]
+[PauliZProductInput::add_linear_exp_val] and [PauliZProductInput::add_symbolic_exp_val]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>number_qubits</strong> (<em>int</em>) -- The number of qubits in the PauliZProduct measurement.</p></li>
+<li><p><strong>use_flipped_measurement</strong> (<em>bool</em>) -- Whether or not to use flipped measurements.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>The new instance of PauliZProductInput with pauli_product_qubit_masks = an empty dictionary, the</dt><dd><p>specified number of qubits in input, number_pauli_products = 0, measured_exp_vals = an empty
+dictionary, and whether to use flipped measurements as specified in input.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>self</p>
+</dd>
+</dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="qoqo.measurements.PauliZProductInput.add_linear_exp_val">
 <span class="sig-name descname"><span class="pre">add_linear_exp_val</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">linear</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.measurements.PauliZProductInput.add_linear_exp_val" title="Link to this definition"></a></dt>
@@ -1372,7 +1514,7 @@ of expectation values of Pauli products.</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>str</em>) -- The name of the expectation value.</p></li>
-<li><p><strong>linear</strong> (<em>dict</em><em>[</em><em>int</em><em>, </em><em>float</em><em>]</em>) -- The linear combination of expectation values as a map between Pauli product index and coefficient.</p></li>
+<li><p><strong>linear</strong> (<em>Dict</em><em>[</em><em>int</em><em>, </em><em>float</em><em>]</em>) -- The linear combination of expectation values as a map between Pauli product index and coefficient.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Raises<span class="colon">:</span></dt>
@@ -1391,7 +1533,7 @@ it index.</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>readout</strong> (<em>str</em>) -- The name of the readout register the pauli_product is defined on.</p></li>
-<li><p><strong>pauli_product_mask</strong> (<em>list</em><em>[</em><em>int</em><em>]</em>) -- List of the qubits involved in the Pauli produc measurement.</p></li>
+<li><p><strong>pauli_product_mask</strong> (<em>List</em><em>[</em><em>int</em><em>]</em>) -- List of the qubits involved in the Pauli produc measurement.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
