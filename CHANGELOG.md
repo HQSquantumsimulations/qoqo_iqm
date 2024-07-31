@@ -4,6 +4,10 @@ This changelog tracks changes to the qoqo_iqm project starting at version 0.1.0.
 
 ## Not released
 
+## 0.10.1
+
+* Updated to qoqo 1.15
+
 ## 0.10.0
 
 * Updated to pyo3 0.21.
