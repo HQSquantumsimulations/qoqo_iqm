@@ -74,7 +74,7 @@ pub struct IqmInstruction {
 /// * `device_number_qubits` - The number of qubits of the backend device. It is used to know how
 ///    many qubits to measure with [roqoqo::operations::PragmaRepeatedMeasurement]
 /// * `number_measurements_internal` - If set, the number of measurements that has been overwritten
-/// in the backend
+///   in the backend
 /// * `circuit_index` - Index of the circuit in the batch, needed to assign a unique name to the circuit.
 ///
 /// # Returns

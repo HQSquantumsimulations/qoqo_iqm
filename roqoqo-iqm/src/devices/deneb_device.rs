@@ -60,7 +60,7 @@ impl DenebDevice {
     /// This involves checking
     /// 1) The device's connectivity
     /// 2) The presence of subsequent Load operations or subsequent Store operations, which are not
-    /// allowed since only a single excitation can be stored in the resonator at any time.
+    ///    allowed since only a single excitation can be stored in the resonator at any time.
     ///
     /// # Arguments
     ///
@@ -81,7 +81,7 @@ impl DenebDevice {
     /// 1) Multiple subsequent SingleExcitatoinLoad.
     /// 2) Multiple subsequent SingleExcitatoinStore.
     /// 3) A combination like Store - RotateXY - Load where the qubit involved in all three
-    /// operations is the same.
+    ///    operations is the same.
     ///
     /// # Arguments
     ///
