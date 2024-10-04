@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="English" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>qoqo.CircuitDag &mdash; qoqo-iqm 0.10.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=c86f77de"></script>
+        <script src="../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            qoqo-iqm
+          </a>
+              <div class="version">
+                0.10.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">qoqo.CircuitDag</a><ul>
+<li><a class="reference internal" href="#qoqo.CircuitDag"><code class="docutils literal notranslate"><span class="pre">CircuitDag</span></code></a><ul>
+<li><a class="reference internal" href="#qoqo.CircuitDag.__init__"><code class="docutils literal notranslate"><span class="pre">CircuitDag.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.CircuitDag.add_to_back"><code class="docutils literal notranslate"><span class="pre">CircuitDag.add_to_back()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.CircuitDag.add_to_front"><code class="docutils literal notranslate"><span class="pre">CircuitDag.add_to_front()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.CircuitDag.blocking_predecessors"><code class="docutils literal notranslate"><span class="pre">CircuitDag.blocking_predecessors()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.CircuitDag.commuting_operations"><code class="docutils literal notranslate"><span class="pre">CircuitDag.commuting_operations()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.CircuitDag.execution_blocked"><code class="docutils literal notranslate"><span class="pre">CircuitDag.execution_blocked()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.CircuitDag.first_operation_involving_classical"><code class="docutils literal notranslate"><span class="pre">CircuitDag.first_operation_involving_classical()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.CircuitDag.first_operation_involving_qubit"><code class="docutils literal notranslate"><span class="pre">CircuitDag.first_operation_involving_qubit()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.CircuitDag.first_parallel_block"><code class="docutils literal notranslate"><span class="pre">CircuitDag.first_parallel_block()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.CircuitDag.from_bincode"><code class="docutils literal notranslate"><span class="pre">CircuitDag.from_bincode()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.CircuitDag.from_circuit"><code class="docutils literal notranslate"><span class="pre">CircuitDag.from_circuit()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.CircuitDag.get"><code class="docutils literal notranslate"><span class="pre">CircuitDag.get()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.CircuitDag.last_operation_involving_classical"><code class="docutils literal notranslate"><span class="pre">CircuitDag.last_operation_involving_classical()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.CircuitDag.last_operation_involving_qubit"><code class="docutils literal notranslate"><span class="pre">CircuitDag.last_operation_involving_qubit()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.CircuitDag.last_parallel_block"><code class="docutils literal notranslate"><span class="pre">CircuitDag.last_parallel_block()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.CircuitDag.new_front_layer"><code class="docutils literal notranslate"><span class="pre">CircuitDag.new_front_layer()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.CircuitDag.parallel_blocks"><code class="docutils literal notranslate"><span class="pre">CircuitDag.parallel_blocks()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.CircuitDag.successors"><code class="docutils literal notranslate"><span class="pre">CircuitDag.successors()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.CircuitDag.to_bincode"><code class="docutils literal notranslate"><span class="pre">CircuitDag.to_bincode()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.CircuitDag.to_circuit"><code class="docutils literal notranslate"><span class="pre">CircuitDag.to_circuit()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">qoqo-iqm</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">qoqo.CircuitDag</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/generated/generated/qoqo.CircuitDag.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="qoqo-circuitdag">
+<h1>qoqo.CircuitDag<a class="headerlink" href="#qoqo-circuitdag" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="qoqo.CircuitDag">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qoqo.</span></span><span class="sig-name descname"><span class="pre">CircuitDag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node_number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edge_number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">300</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.CircuitDag" title="Link to this definition"></a></dt>
+<dd><p>Represents the Direct Acyclic Graph (DAG) of a Circuit.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.CircuitDag.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.CircuitDag.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#qoqo.CircuitDag.__init__" title="qoqo.CircuitDag.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../qoqo.html#qoqo.CircuitDag.add_to_back" title="qoqo.CircuitDag.add_to_back"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_to_back</span></code></a>(op)</p></td>
+<td><p>Add an Operation to the back of the CircuitDag, if necessary.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../qoqo.html#qoqo.CircuitDag.add_to_front" title="qoqo.CircuitDag.add_to_front"><code class="xref py py-obj docutils literal notranslate"><span class="pre">add_to_front</span></code></a>(op)</p></td>
+<td><p>Add an Operation to the front of the CircuitDag, if necessary.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../qoqo.html#qoqo.CircuitDag.blocking_predecessors" title="qoqo.CircuitDag.blocking_predecessors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">blocking_predecessors</span></code></a>(already_executed, ...)</p></td>
+<td><p>Checks which of the direct predecessors of an Operation in the CircuitDag blocks the execution.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../qoqo.html#qoqo.CircuitDag.commuting_operations" title="qoqo.CircuitDag.commuting_operations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">commuting_operations</span></code></a>()</p></td>
+<td><p>Returns the list of nodes of commuting operations in CircuitDag.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../qoqo.html#qoqo.CircuitDag.execution_blocked" title="qoqo.CircuitDag.execution_blocked"><code class="xref py py-obj docutils literal notranslate"><span class="pre">execution_blocked</span></code></a>(already_executed, ...)</p></td>
+<td><p>Checks if executing an operation is blocked by any not-yet executed operation.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../qoqo.html#qoqo.CircuitDag.first_operation_involving_classical" title="qoqo.CircuitDag.first_operation_involving_classical"><code class="xref py py-obj docutils literal notranslate"><span class="pre">first_operation_involving_classical</span></code></a>()</p></td>
+<td><p>Returns a dictionary where a key is composed by the name and the size of the classical register and its value represents the first node that involves that register.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../qoqo.html#qoqo.CircuitDag.first_operation_involving_qubit" title="qoqo.CircuitDag.first_operation_involving_qubit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">first_operation_involving_qubit</span></code></a>()</p></td>
+<td><p>Returns a dictionary where a key represents a qubit and its value represents the first node that involves that qubit.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../qoqo.html#qoqo.CircuitDag.first_parallel_block" title="qoqo.CircuitDag.first_parallel_block"><code class="xref py py-obj docutils literal notranslate"><span class="pre">first_parallel_block</span></code></a>()</p></td>
+<td><p>Returns a set containing the nodes in the first parallel block.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../qoqo.html#qoqo.CircuitDag.from_bincode" title="qoqo.CircuitDag.from_bincode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_bincode</span></code></a>(input)</p></td>
+<td><p>Convert the bincode representation of the CircuitDag to a CircuitDag using the [bincode] crate.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../qoqo.html#qoqo.CircuitDag.from_circuit" title="qoqo.CircuitDag.from_circuit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_circuit</span></code></a>()</p></td>
+<td><p>Create a CircuitDag from a given Circuit;</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../qoqo.html#qoqo.CircuitDag.get" title="qoqo.CircuitDag.get"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get</span></code></a>(index)</p></td>
+<td><p>Given a NodeIndex, returns the Operation contained in the node of the CircuitDag.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../qoqo.html#qoqo.CircuitDag.last_operation_involving_classical" title="qoqo.CircuitDag.last_operation_involving_classical"><code class="xref py py-obj docutils literal notranslate"><span class="pre">last_operation_involving_classical</span></code></a>()</p></td>
+<td><p>Returns a dictionary where a key is composed by the name and the size of the classical register and its value represents the last node that involves that register.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../qoqo.html#qoqo.CircuitDag.last_operation_involving_qubit" title="qoqo.CircuitDag.last_operation_involving_qubit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">last_operation_involving_qubit</span></code></a>()</p></td>
+<td><p>Returns a dictionary where a key represents a qubit and its value represents the last node that involves that qubit.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../qoqo.html#qoqo.CircuitDag.last_parallel_block" title="qoqo.CircuitDag.last_parallel_block"><code class="xref py py-obj docutils literal notranslate"><span class="pre">last_parallel_block</span></code></a>()</p></td>
+<td><p>Returns a set containing the nodes in the last parallel block.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../qoqo.html#qoqo.CircuitDag.new_front_layer" title="qoqo.CircuitDag.new_front_layer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">new_front_layer</span></code></a>(already_executed, ...)</p></td>
+<td><p>Returns a new front-layer after executing an operation from the current front layer.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../qoqo.html#qoqo.CircuitDag.parallel_blocks" title="qoqo.CircuitDag.parallel_blocks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parallel_blocks</span></code></a>()</p></td>
+<td><p>Returns an iterator over the possible parallel blocks in circuit that can be executed simultaneously</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../qoqo.html#qoqo.CircuitDag.successors" title="qoqo.CircuitDag.successors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">successors</span></code></a>(node)</p></td>
+<td><p>Returns the list of the successors of a given node in the CircuitDag.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../qoqo.html#qoqo.CircuitDag.to_bincode" title="qoqo.CircuitDag.to_bincode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_bincode</span></code></a>()</p></td>
+<td><p>Return the bincode representation of the CircuitDag using the [bincode] crate.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../qoqo.html#qoqo.CircuitDag.to_circuit" title="qoqo.CircuitDag.to_circuit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_circuit</span></code></a>()</p></td>
+<td><p>Transforms the CircuitDag into a Circuit.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.CircuitDag.add_to_back">
+<span class="sig-name descname"><span class="pre">add_to_back</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">op</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.CircuitDag.add_to_back" title="Link to this definition"></a></dt>
+<dd><p>Add an Operation to the back of the CircuitDag, if necessary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>op</strong> (<em>Operation</em>) -- The Operation to add to the back of the CircuitDag.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>TypeError</strong> -- The Python Object cannot be converted to Operation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.CircuitDag.add_to_front">
+<span class="sig-name descname"><span class="pre">add_to_front</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">op</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.CircuitDag.add_to_front" title="Link to this definition"></a></dt>
+<dd><p>Add an Operation to the front of the CircuitDag, if necessary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>op</strong> (<em>Operation</em>) -- The Operation to add to the front of the CircuitDag.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>TypeError</strong> -- The Python Object cannot be converted to Operation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.CircuitDag.blocking_predecessors">
+<span class="sig-name descname"><span class="pre">blocking_predecessors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">already_executed</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_be_executed</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.CircuitDag.blocking_predecessors" title="Link to this definition"></a></dt>
+<dd><p>Checks which of the direct predecessors of an Operation in the CircuitDag blocks the execution.</p>
+<p>Warning:
+This method can only be used to determine if an operation can be executed when <cite>already_executed</cite> is consistent.
+When the list  <cite>already_executed</cite> is inconsistent (a n operation is reported as executed that could not have been executed yet)
+this method returning an empty vector does not imply that the <cite>to_be_executed</cite> operation can be executed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>already_executed</strong> (<em>List</em><em>[</em><em>int</em><em>]</em>) -- List of NodeIndices of Nodes that have already been executed in the Circuit.</p></li>
+<li><p><strong>to_be_executed</strong> (<em>int</em>) -- NodeIndex of the Operation that should be executed next.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>List containing the sorted blocking elements.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.CircuitDag.commuting_operations">
+<span class="sig-name descname"><span class="pre">commuting_operations</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.CircuitDag.commuting_operations" title="Link to this definition"></a></dt>
+<dd><p>Returns the list of nodes of commuting operations in CircuitDag.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The list of nodes of commuting operations.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>List[int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.CircuitDag.execution_blocked">
+<span class="sig-name descname"><span class="pre">execution_blocked</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">already_executed</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_be_executed</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.CircuitDag.execution_blocked" title="Link to this definition"></a></dt>
+<dd><p>Checks if executing an operation is blocked by any not-yet executed operation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>already_executed</strong> (<em>List</em><em>[</em><em>int</em><em>]</em>) -- List of NodeIndices of Nodes that have already been executed in the Circuit.</p></li>
+<li><p><strong>to_be_executed</strong> (<em>int</em>) -- NodeIndex of the operation that should be executed next.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>List containing the sorted blocking elements.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.CircuitDag.first_operation_involving_classical">
+<span class="sig-name descname"><span class="pre">first_operation_involving_classical</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.CircuitDag.first_operation_involving_classical" title="Link to this definition"></a></dt>
+<dd><p>Returns a dictionary where a key is composed by the name and the size
+of the classical register and its value represents the first node that involves that
+register.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The dictionary of {(str, int), int} elements.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Dict[(str, int), int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.CircuitDag.first_operation_involving_qubit">
+<span class="sig-name descname"><span class="pre">first_operation_involving_qubit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.CircuitDag.first_operation_involving_qubit" title="Link to this definition"></a></dt>
+<dd><p>Returns a dictionary where a key represents a qubit and its value represents
+the first node that involves that qubit.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The dictionary of {qubit: node} elements.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Dict[int, int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.CircuitDag.first_parallel_block">
+<span class="sig-name descname"><span class="pre">first_parallel_block</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.CircuitDag.first_parallel_block" title="Link to this definition"></a></dt>
+<dd><p>Returns a set containing the nodes in the first parallel block.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The set of nodes in the first parallel block.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Set[int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.CircuitDag.from_bincode">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_bincode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.CircuitDag.from_bincode" title="Link to this definition"></a></dt>
+<dd><p>Convert the bincode representation of the CircuitDag to a CircuitDag using the [bincode] crate.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>input</strong> (<em>ByteArray</em>) -- The serialized CircuitDag (in [bincode] form).</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The deserialized CircuitDag.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="../qoqo.html#qoqo.CircuitDag" title="qoqo.CircuitDag">CircuitDag</a></p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>TypeError</strong> -- Input cannot be converted to byte array.</p></li>
+<li><p><strong>ValueError</strong> -- Input cannot be deserialized to CircuitDag.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.CircuitDag.from_circuit">
+<span class="sig-name descname"><span class="pre">from_circuit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.CircuitDag.from_circuit" title="Link to this definition"></a></dt>
+<dd><p>Create a CircuitDag from a given Circuit;</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>circuit</strong> (<a class="reference internal" href="../qoqo.html#qoqo.Circuit" title="qoqo.Circuit"><em>Circuit</em></a>) -- The Circuit to build the new CircuitDag from.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The new CircuitDag.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>self</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.CircuitDag.get">
+<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.CircuitDag.get" title="Link to this definition"></a></dt>
+<dd><p>Given a NodeIndex, returns the Operation contained in the node of
+the CircuitDag.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) -- The index of the node to get from the CircuitDag.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The Operation at the given index (if it exists).</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Operation</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>IndexError</strong> -- Index out of range.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.CircuitDag.last_operation_involving_classical">
+<span class="sig-name descname"><span class="pre">last_operation_involving_classical</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.CircuitDag.last_operation_involving_classical" title="Link to this definition"></a></dt>
+<dd><p>Returns a dictionary where a key is composed by the name and the size
+of the classical register and its value represents the last node that involves that
+register.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The dictionary of {(str, int), int} elements.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Dict[(str, int), int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.CircuitDag.last_operation_involving_qubit">
+<span class="sig-name descname"><span class="pre">last_operation_involving_qubit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.CircuitDag.last_operation_involving_qubit" title="Link to this definition"></a></dt>
+<dd><p>Returns a dictionary where a key represents a qubit and its value represents
+the last node that involves that qubit.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The dictionary of {qubit: node} elements.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Dict[int, int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.CircuitDag.last_parallel_block">
+<span class="sig-name descname"><span class="pre">last_parallel_block</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.CircuitDag.last_parallel_block" title="Link to this definition"></a></dt>
+<dd><p>Returns a set containing the nodes in the last parallel block.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The set of nodes in the last parallel block.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Set[int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.CircuitDag.new_front_layer">
+<span class="sig-name descname"><span class="pre">new_front_layer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">already_executed</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_front_layer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_be_executed</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.CircuitDag.new_front_layer" title="Link to this definition"></a></dt>
+<dd><p>Returns a new front-layer after executing an operation from the current front layer.</p>
+<p>Returns an error if operation to be executed is not in the current front layer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>already_executed</strong> (<em>List</em><em>[</em><em>int</em><em>]</em>) -- List of NodeIndices of Nodes that have already been executed in the Circuit.</p></li>
+<li><p><strong>current_front_layer</strong> (<em>List</em><em>[</em><em>int</em><em>]</em>) -- List of NodeIndices in the current front layer ready to be executed if physically possible.</p></li>
+<li><p><strong>to_be_executed</strong> (<em>int</em>) -- NodeIndex of the operation that should be executed next.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.CircuitDag.parallel_blocks">
+<span class="sig-name descname"><span class="pre">parallel_blocks</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.CircuitDag.parallel_blocks" title="Link to this definition"></a></dt>
+<dd><p>Returns an iterator over the possible parallel blocks in circuit that can be executed simultaneously</p>
+<p>Returns an Iterator over Vectors of references to the NodeIndices in the parallel block as well
+as references to the Operation in the blocks</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.CircuitDag.successors">
+<span class="sig-name descname"><span class="pre">successors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.CircuitDag.successors" title="Link to this definition"></a></dt>
+<dd><p>Returns the list of the successors of a given node in the CircuitDag.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.CircuitDag.to_bincode">
+<span class="sig-name descname"><span class="pre">to_bincode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.CircuitDag.to_bincode" title="Link to this definition"></a></dt>
+<dd><p>Return the bincode representation of the CircuitDag using the [bincode] crate.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The serialized CircuitDag (in [bincode] form).</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>ByteArray</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ValueError</strong> -- Cannot serialize CircuitDag to bytes.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.CircuitDag.to_circuit">
+<span class="sig-name descname"><span class="pre">to_circuit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.CircuitDag.to_circuit" title="Link to this definition"></a></dt>
+<dd><p>Transforms the CircuitDag into a Circuit.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, HQS Quantum Simulations GmbH.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

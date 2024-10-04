@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="English" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>qoqo.noise_models.ImperfectReadoutModel &mdash; qoqo-iqm 0.10.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=c86f77de"></script>
+        <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            qoqo-iqm
+          </a>
+              <div class="version">
+                0.10.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">qoqo.noise_models.ImperfectReadoutModel</a><ul>
+<li><a class="reference internal" href="#qoqo.noise_models.ImperfectReadoutModel"><code class="docutils literal notranslate"><span class="pre">ImperfectReadoutModel</span></code></a><ul>
+<li><a class="reference internal" href="#qoqo.noise_models.ImperfectReadoutModel.__init__"><code class="docutils literal notranslate"><span class="pre">ImperfectReadoutModel.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.noise_models.ImperfectReadoutModel.current_version"><code class="docutils literal notranslate"><span class="pre">ImperfectReadoutModel.current_version()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.noise_models.ImperfectReadoutModel.from_bincode"><code class="docutils literal notranslate"><span class="pre">ImperfectReadoutModel.from_bincode()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.noise_models.ImperfectReadoutModel.from_json"><code class="docutils literal notranslate"><span class="pre">ImperfectReadoutModel.from_json()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.noise_models.ImperfectReadoutModel.json_schema"><code class="docutils literal notranslate"><span class="pre">ImperfectReadoutModel.json_schema()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.noise_models.ImperfectReadoutModel.min_supported_version"><code class="docutils literal notranslate"><span class="pre">ImperfectReadoutModel.min_supported_version()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.noise_models.ImperfectReadoutModel.new_with_uniform_error"><code class="docutils literal notranslate"><span class="pre">ImperfectReadoutModel.new_with_uniform_error()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.noise_models.ImperfectReadoutModel.prob_detect_0_as_1"><code class="docutils literal notranslate"><span class="pre">ImperfectReadoutModel.prob_detect_0_as_1()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.noise_models.ImperfectReadoutModel.prob_detect_1_as_0"><code class="docutils literal notranslate"><span class="pre">ImperfectReadoutModel.prob_detect_1_as_0()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.noise_models.ImperfectReadoutModel.set_error_probabilites"><code class="docutils literal notranslate"><span class="pre">ImperfectReadoutModel.set_error_probabilites()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.noise_models.ImperfectReadoutModel.to_bincode"><code class="docutils literal notranslate"><span class="pre">ImperfectReadoutModel.to_bincode()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.noise_models.ImperfectReadoutModel.to_json"><code class="docutils literal notranslate"><span class="pre">ImperfectReadoutModel.to_json()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">qoqo-iqm</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">qoqo.noise_models.ImperfectReadoutModel</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/generated/generated/generated/qoqo.noise_models.ImperfectReadoutModel.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="qoqo-noise-models-imperfectreadoutmodel">
+<h1>qoqo.noise_models.ImperfectReadoutModel<a class="headerlink" href="#qoqo-noise-models-imperfectreadoutmodel" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="qoqo.noise_models.ImperfectReadoutModel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qoqo.noise_models.</span></span><span class="sig-name descname"><span class="pre">ImperfectReadoutModel</span></span><a class="headerlink" href="#qoqo.noise_models.ImperfectReadoutModel" title="Link to this definition"></a></dt>
+<dd><p>Noise model representing readout errors.</p>
+<p>Readout errors are modeled by two probabilities in this simple model.
+One probability to detect a 1 instead of a 0 when the quantum measurement gives 0 and
+one probability to detect a 0 instead of a 1 when the quantum measurement gives 1.</p>
+<p># Example</p>
+<p><a href="#id1"><span class="problematic" id="id2">``</span></a><a href="#id3"><span class="problematic" id="id4">`</span></a>Python
+form qoqo.noise_models import ImperfectReadoutModel</p>
+<p>model = ImperfectReadoutModel.new_with_uniform_error(3, 0.5, 0.5);
+model = model.set_error_probabilites(2, 0.3, 0.7)
+uniform_prob = model.prob_detect_0_as_1(0)
+assert uniform_prob == 0.5
+lower_prob = model.prob_detect_0_as_1(2)
+assert lower_prob == 0.3
+higher_prob = model.prob_detect_1_as_0(2)
+assert higher_prob == 0.7
+<a href="#id5"><span class="problematic" id="id6">``</span></a><a href="#id7"><span class="problematic" id="id8">`</span></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.noise_models.ImperfectReadoutModel.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.noise_models.ImperfectReadoutModel.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#qoqo.noise_models.ImperfectReadoutModel.__init__" title="qoqo.noise_models.ImperfectReadoutModel.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../qoqo.noise_models.html#qoqo.noise_models.ImperfectReadoutModel.current_version" title="qoqo.noise_models.ImperfectReadoutModel.current_version"><code class="xref py py-obj docutils literal notranslate"><span class="pre">current_version</span></code></a>()</p></td>
+<td><p>Returns the current version of the qoqo library .</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../qoqo.noise_models.html#qoqo.noise_models.ImperfectReadoutModel.from_bincode" title="qoqo.noise_models.ImperfectReadoutModel.from_bincode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_bincode</span></code></a>(input)</p></td>
+<td><p>Convert the bincode representation of the Noise-Model to a device using the bincode crate.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../qoqo.noise_models.html#qoqo.noise_models.ImperfectReadoutModel.from_json" title="qoqo.noise_models.ImperfectReadoutModel.from_json"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_json</span></code></a>(input)</p></td>
+<td><p>Convert the json representation of a device to a Noise-Model.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../qoqo.noise_models.html#qoqo.noise_models.ImperfectReadoutModel.json_schema" title="qoqo.noise_models.ImperfectReadoutModel.json_schema"><code class="xref py py-obj docutils literal notranslate"><span class="pre">json_schema</span></code></a>()</p></td>
+<td><p>Return the JsonSchema for the json serialisation of the class.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../qoqo.noise_models.html#qoqo.noise_models.ImperfectReadoutModel.min_supported_version" title="qoqo.noise_models.ImperfectReadoutModel.min_supported_version"><code class="xref py py-obj docutils literal notranslate"><span class="pre">min_supported_version</span></code></a>()</p></td>
+<td><p>Return the minimum version of qoqo that supports this object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../qoqo.noise_models.html#qoqo.noise_models.ImperfectReadoutModel.new_with_uniform_error" title="qoqo.noise_models.ImperfectReadoutModel.new_with_uniform_error"><code class="xref py py-obj docutils literal notranslate"><span class="pre">new_with_uniform_error</span></code></a>(number_qubits, ...)</p></td>
+<td><p>Convenience function to create uniform error probabilities</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../qoqo.noise_models.html#qoqo.noise_models.ImperfectReadoutModel.prob_detect_0_as_1" title="qoqo.noise_models.ImperfectReadoutModel.prob_detect_0_as_1"><code class="xref py py-obj docutils literal notranslate"><span class="pre">prob_detect_0_as_1</span></code></a>(qubit)</p></td>
+<td><p>Return probability to detect 0 as 1 for a qubit</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../qoqo.noise_models.html#qoqo.noise_models.ImperfectReadoutModel.prob_detect_1_as_0" title="qoqo.noise_models.ImperfectReadoutModel.prob_detect_1_as_0"><code class="xref py py-obj docutils literal notranslate"><span class="pre">prob_detect_1_as_0</span></code></a>(qubit)</p></td>
+<td><p>Return probability to detect 1 as 0 for a qubit</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../qoqo.noise_models.html#qoqo.noise_models.ImperfectReadoutModel.set_error_probabilites" title="qoqo.noise_models.ImperfectReadoutModel.set_error_probabilites"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_error_probabilites</span></code></a>(qubit, ...)</p></td>
+<td><p>Set and overwrite the measurement error probabilities</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../qoqo.noise_models.html#qoqo.noise_models.ImperfectReadoutModel.to_bincode" title="qoqo.noise_models.ImperfectReadoutModel.to_bincode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_bincode</span></code></a>()</p></td>
+<td><p>Return the bincode representation of the Noise-Model using the bincode crate.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../qoqo.noise_models.html#qoqo.noise_models.ImperfectReadoutModel.to_json" title="qoqo.noise_models.ImperfectReadoutModel.to_json"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_json</span></code></a>()</p></td>
+<td><p>Return the json representation of the Noise-Model.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.noise_models.ImperfectReadoutModel.current_version">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">current_version</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.noise_models.ImperfectReadoutModel.current_version" title="Link to this definition"></a></dt>
+<dd><p>Returns the current version of the qoqo library .</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The current version of the library.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.noise_models.ImperfectReadoutModel.from_bincode">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_bincode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.noise_models.ImperfectReadoutModel.from_bincode" title="Link to this definition"></a></dt>
+<dd><p>Convert the bincode representation of the Noise-Model to a device using the bincode crate.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>input</strong> (<em>ByteArray</em>) -- The serialized Noise-Model (in bincode form).</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The deserialized Noise-Model.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>TypeError</strong> -- Input cannot be converted to byte array.</p></li>
+<li><p><strong>ValueError</strong> -- Input cannot be deserialized to selected Noise-Model.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.noise_models.ImperfectReadoutModel.from_json">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.noise_models.ImperfectReadoutModel.from_json" title="Link to this definition"></a></dt>
+<dd><p>Convert the json representation of a device to a Noise-Model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>input</strong> (<em>str</em>) -- The serialized device in json form.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The deserialized device.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ValueError</strong> -- Input cannot be deserialized to selected Noise-Model.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.noise_models.ImperfectReadoutModel.json_schema">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">json_schema</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.noise_models.ImperfectReadoutModel.json_schema" title="Link to this definition"></a></dt>
+<dd><p>Return the JsonSchema for the json serialisation of the class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The json schema serialized to json</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.noise_models.ImperfectReadoutModel.min_supported_version">
+<span class="sig-name descname"><span class="pre">min_supported_version</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.noise_models.ImperfectReadoutModel.min_supported_version" title="Link to this definition"></a></dt>
+<dd><p>Return the minimum version of qoqo that supports this object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The minimum version of the qoqo library to deserialize this object.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.noise_models.ImperfectReadoutModel.new_with_uniform_error">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">new_with_uniform_error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number_qubits</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prob_detect_0_as_1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prob_detect_1_as_0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.noise_models.ImperfectReadoutModel.new_with_uniform_error" title="Link to this definition"></a></dt>
+<dd><p>Convenience function to create uniform error probabilities</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>number_qubits</strong> (<em>int</em>) -- The number of qubits the uniform error probabilites should be initialized for.</p></li>
+<li><p><strong>prob_detect_0_as_1</strong> (<em>float</em>) -- The error probability to detect a 1 instead of a 0 when measuring 0</p></li>
+<li><p><strong>prob_detect_1_as_0</strong> (<em>float</em>) -- The error probability to detect a 0 instead of a 1 when measuring 1</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The new error model</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="../qoqo.noise_models.html#qoqo.noise_models.ImperfectReadoutModel" title="qoqo.noise_models.ImperfectReadoutModel">ImperfectReadoutModel</a></p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> -- Raised if the error probabilities are not valid (&lt; 0 or &gt; 1)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.noise_models.ImperfectReadoutModel.prob_detect_0_as_1">
+<span class="sig-name descname"><span class="pre">prob_detect_0_as_1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.noise_models.ImperfectReadoutModel.prob_detect_0_as_1" title="Link to this definition"></a></dt>
+<dd><p>Return probability to detect 0 as 1 for a qubit</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>qubit</strong> (<em>int</em>) -- The qubit for which the probability is returned.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The probability to detect 0 as 1 for the qubit</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.noise_models.ImperfectReadoutModel.prob_detect_1_as_0">
+<span class="sig-name descname"><span class="pre">prob_detect_1_as_0</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.noise_models.ImperfectReadoutModel.prob_detect_1_as_0" title="Link to this definition"></a></dt>
+<dd><p>Return probability to detect 1 as 0 for a qubit</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>qubit</strong> (<em>int</em>) -- The qubit for which the probability is returned.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The probability to detect 1 as 0 for the qubit</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.noise_models.ImperfectReadoutModel.set_error_probabilites">
+<span class="sig-name descname"><span class="pre">set_error_probabilites</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qubit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prob_detect_0_as_1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prob_detect_1_as_0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.noise_models.ImperfectReadoutModel.set_error_probabilites" title="Link to this definition"></a></dt>
+<dd><p>Set and overwrite the measurement error probabilities</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>qubit</strong> (<em>int</em>) -- The qubitsfor which error rates is set.</p></li>
+<li><p><strong>prob_detect_0_as_1</strong> (<em>float</em>) -- The error probability to detect a 1 instead of a 0 when measuring 0</p></li>
+<li><p><strong>prob_detect_1_as_0</strong> (<em>float</em>) -- The error probability to detect a 0 instead of a 1 when measuring 1</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The updated error model</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Self</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> -- Raised if the error probabilities are not valid (&lt; 0 or &gt; 1).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.noise_models.ImperfectReadoutModel.to_bincode">
+<span class="sig-name descname"><span class="pre">to_bincode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.noise_models.ImperfectReadoutModel.to_bincode" title="Link to this definition"></a></dt>
+<dd><p>Return the bincode representation of the Noise-Model using the bincode crate.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The serialized Noise-Model (in bincode form).</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>ByteArray</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ValueError</strong> -- Cannot serialize Noise-Model to bytes.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.noise_models.ImperfectReadoutModel.to_json">
+<span class="sig-name descname"><span class="pre">to_json</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.noise_models.ImperfectReadoutModel.to_json" title="Link to this definition"></a></dt>
+<dd><p>Return the json representation of the Noise-Model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The serialized form of Noise-Model.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ValueError</strong> -- Cannot serialize Noise-Model to json.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, HQS Quantum Simulations GmbH.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -4,15 +4,6 @@ qoqo.operations
 .. automodule:: qoqo.operations
 
    
-   
-   
-
-   
-   
-   
-
-   
-   
    .. rubric:: Classes
 
    .. autosummary::
@@ -47,6 +38,7 @@ qoqo.operations
       InputSymbolic
       InvSqrtISwap
       InvSqrtPauliX
+      InvSqrtPauliY
       JaynesCummings
       LongitudinalCoupling
       MeasureQubit
@@ -106,17 +98,10 @@ qoqo.operations
       SpinInteraction
       SqrtISwap
       SqrtPauliX
+      SqrtPauliY
       Squeezing
       TGate
       Toffoli
       VariableMSXX
       XY
    
-   
-
-   
-   
-   
-
-
-

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="English" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>qoqo.noise_models.SingleQubitOverrotationDescription &mdash; qoqo-iqm 0.10.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=c86f77de"></script>
+        <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            qoqo-iqm
+          </a>
+              <div class="version">
+                0.10.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">qoqo.noise_models.SingleQubitOverrotationDescription</a><ul>
+<li><a class="reference internal" href="#qoqo.noise_models.SingleQubitOverrotationDescription"><code class="docutils literal notranslate"><span class="pre">SingleQubitOverrotationDescription</span></code></a><ul>
+<li><a class="reference internal" href="#qoqo.noise_models.SingleQubitOverrotationDescription.__init__"><code class="docutils literal notranslate"><span class="pre">SingleQubitOverrotationDescription.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.noise_models.SingleQubitOverrotationDescription.current_version"><code class="docutils literal notranslate"><span class="pre">SingleQubitOverrotationDescription.current_version()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.noise_models.SingleQubitOverrotationDescription.from_bincode"><code class="docutils literal notranslate"><span class="pre">SingleQubitOverrotationDescription.from_bincode()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.noise_models.SingleQubitOverrotationDescription.from_json"><code class="docutils literal notranslate"><span class="pre">SingleQubitOverrotationDescription.from_json()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.noise_models.SingleQubitOverrotationDescription.json_schema"><code class="docutils literal notranslate"><span class="pre">SingleQubitOverrotationDescription.json_schema()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.noise_models.SingleQubitOverrotationDescription.min_supported_version"><code class="docutils literal notranslate"><span class="pre">SingleQubitOverrotationDescription.min_supported_version()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.noise_models.SingleQubitOverrotationDescription.to_bincode"><code class="docutils literal notranslate"><span class="pre">SingleQubitOverrotationDescription.to_bincode()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.noise_models.SingleQubitOverrotationDescription.to_json"><code class="docutils literal notranslate"><span class="pre">SingleQubitOverrotationDescription.to_json()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">qoqo-iqm</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">qoqo.noise_models.SingleQubitOverrotationDescription</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/generated/generated/generated/qoqo.noise_models.SingleQubitOverrotationDescription.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="qoqo-noise-models-singlequbitoverrotationdescription">
+<h1>qoqo.noise_models.SingleQubitOverrotationDescription<a class="headerlink" href="#qoqo-noise-models-singlequbitoverrotationdescription" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="qoqo.noise_models.SingleQubitOverrotationDescription">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">qoqo.noise_models.</span></span><span class="sig-name descname"><span class="pre">SingleQubitOverrotationDescription</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">theta_mean</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">theta_std</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.noise_models.SingleQubitOverrotationDescription" title="Link to this definition"></a></dt>
+<dd><p>Description of single qubit overrotation noise model, [roqoqo::noise_models::SingleQubitOverrotationOnGate].</p>
+<p>Consists of the raw data needed to construct a rotation gate that adds
+overrotation: gate name and statistics (mean and standard deviation) of a Gaussian distribution
+from which the overrotation angle is sampled.
+Example:</p>
+<p><code class="docutils literal notranslate"><span class="pre">`</span>
+<span class="pre">from</span> <span class="pre">qoqo.noise_models</span> <span class="pre">import</span> <span class="pre">SingleQubitOverrotationDescription;</span>
+<span class="pre">gate</span> <span class="pre">=</span> <span class="pre">&quot;RotateX&quot;;</span>
+<span class="pre">theta_mean</span> <span class="pre">=</span> <span class="pre">0.0;</span>
+<span class="pre">theta_std</span> <span class="pre">=</span> <span class="pre">1.0;</span>
+<span class="pre">noise_desc</span> <span class="pre">=</span> <span class="pre">SingleQubitOverrotationDescription(gate,</span> <span class="pre">theta_mean,</span> <span class="pre">theta_std);</span>
+<span class="pre">`</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.noise_models.SingleQubitOverrotationDescription.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.noise_models.SingleQubitOverrotationDescription.__init__" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#qoqo.noise_models.SingleQubitOverrotationDescription.__init__" title="qoqo.noise_models.SingleQubitOverrotationDescription.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../qoqo.noise_models.html#qoqo.noise_models.SingleQubitOverrotationDescription.current_version" title="qoqo.noise_models.SingleQubitOverrotationDescription.current_version"><code class="xref py py-obj docutils literal notranslate"><span class="pre">current_version</span></code></a>()</p></td>
+<td><p>Return the current version of the qoqo library.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../qoqo.noise_models.html#qoqo.noise_models.SingleQubitOverrotationDescription.from_bincode" title="qoqo.noise_models.SingleQubitOverrotationDescription.from_bincode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_bincode</span></code></a>(input)</p></td>
+<td><p>Convert the bincode representation of the overotation description to a device using the bincode crate.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../qoqo.noise_models.html#qoqo.noise_models.SingleQubitOverrotationDescription.from_json" title="qoqo.noise_models.SingleQubitOverrotationDescription.from_json"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_json</span></code></a>(input)</p></td>
+<td><p>Convert the json representation of a device to a overotation description.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../qoqo.noise_models.html#qoqo.noise_models.SingleQubitOverrotationDescription.json_schema" title="qoqo.noise_models.SingleQubitOverrotationDescription.json_schema"><code class="xref py py-obj docutils literal notranslate"><span class="pre">json_schema</span></code></a>()</p></td>
+<td><p>Return the JsonSchema for the json serialisation of the class.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../qoqo.noise_models.html#qoqo.noise_models.SingleQubitOverrotationDescription.min_supported_version" title="qoqo.noise_models.SingleQubitOverrotationDescription.min_supported_version"><code class="xref py py-obj docutils literal notranslate"><span class="pre">min_supported_version</span></code></a>()</p></td>
+<td><p>Return the minimum version of qoqo that supports this object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../qoqo.noise_models.html#qoqo.noise_models.SingleQubitOverrotationDescription.to_bincode" title="qoqo.noise_models.SingleQubitOverrotationDescription.to_bincode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_bincode</span></code></a>()</p></td>
+<td><p>Return the bincode representation of SingleQubitOverrotationDescription using the bincode crate.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../qoqo.noise_models.html#qoqo.noise_models.SingleQubitOverrotationDescription.to_json" title="qoqo.noise_models.SingleQubitOverrotationDescription.to_json"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_json</span></code></a>()</p></td>
+<td><p>Return the json representation of the SingleQubitOverrotationDescription.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.noise_models.SingleQubitOverrotationDescription.current_version">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">current_version</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.noise_models.SingleQubitOverrotationDescription.current_version" title="Link to this definition"></a></dt>
+<dd><p>Return the current version of the qoqo library.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The current version of the library.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.noise_models.SingleQubitOverrotationDescription.from_bincode">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_bincode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.noise_models.SingleQubitOverrotationDescription.from_bincode" title="Link to this definition"></a></dt>
+<dd><p>Convert the bincode representation of the overotation description to a device using the bincode crate.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>input</strong> (<em>ByteArray</em>) -- The serialized Noise-Model (in bincode form).</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The deserialized Noise-Model.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>TypeError</strong> -- Input cannot be converted to byte array.</p></li>
+<li><p><strong>ValueError</strong> -- Input cannot be deserialized to selected Noise-Model.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.noise_models.SingleQubitOverrotationDescription.from_json">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.noise_models.SingleQubitOverrotationDescription.from_json" title="Link to this definition"></a></dt>
+<dd><p>Convert the json representation of a device to a overotation description.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>input</strong> (<em>str</em>) -- The serialized device in json form.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The deserialized device.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ValueError</strong> -- Input cannot be deserialized to selected Noise-Model.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.noise_models.SingleQubitOverrotationDescription.json_schema">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">json_schema</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.noise_models.SingleQubitOverrotationDescription.json_schema" title="Link to this definition"></a></dt>
+<dd><p>Return the JsonSchema for the json serialisation of the class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The json schema serialized to json</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.noise_models.SingleQubitOverrotationDescription.min_supported_version">
+<span class="sig-name descname"><span class="pre">min_supported_version</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.noise_models.SingleQubitOverrotationDescription.min_supported_version" title="Link to this definition"></a></dt>
+<dd><p>Return the minimum version of qoqo that supports this object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The minimum version of the qoqo library to deserialize this object.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.noise_models.SingleQubitOverrotationDescription.to_bincode">
+<span class="sig-name descname"><span class="pre">to_bincode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.noise_models.SingleQubitOverrotationDescription.to_bincode" title="Link to this definition"></a></dt>
+<dd><p>Return the bincode representation of SingleQubitOverrotationDescription using the bincode crate.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The serialized SingleQubitOverrotationDescription (in bincode form).</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>ByteArray</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ValueError</strong> -- Cannot serialize SingleQubitOverrotationDescription to bytes.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.noise_models.SingleQubitOverrotationDescription.to_json">
+<span class="sig-name descname"><span class="pre">to_json</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.noise_models.SingleQubitOverrotationDescription.to_json" title="Link to this definition"></a></dt>
+<dd><p>Return the json representation of the SingleQubitOverrotationDescription.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The serialized form of SingleQubitOverrotationDescription.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ValueError</strong> -- Cannot serialize SingleQubitOverrotationDescription.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, HQS Quantum Simulations GmbH.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -4,14 +4,11 @@
 .. automodule:: qoqo
 
    
-   
-   
+   .. rubric:: Functions
 
+   .. autosummary::
    
-   
-   
-
-   
+      available_gates_hqslang
    
    .. rubric:: Classes
 
@@ -60,6 +57,7 @@
       InputSymbolic
       InvSqrtISwap
       InvSqrtPauliX
+      InvSqrtPauliY
       JaynesCummings
       LongitudinalCoupling
       MeasureQubit
@@ -124,6 +122,7 @@
       SpinInteraction
       SqrtISwap
       SqrtPauliX
+      SqrtPauliY
       SquareLatticeDevice
       Squeezing
       TGate
@@ -131,11 +130,3 @@
       VariableMSXX
       XY
    
-   
-
-   
-   
-   
-
-
-
