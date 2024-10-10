@@ -1001,7 +1001,7 @@ dependencies = [
 
 [[package]]
 name = "qoqo-iqm"
-version = "0.10.1"
+version = "0.10.2"
 dependencies = [
  "bincode",
  "pyo3",
@@ -1223,7 +1223,7 @@ dependencies = [
 
 [[package]]
 name = "roqoqo-iqm"
-version = "0.10.1"
+version = "0.10.2"
 dependencies = [
  "itertools 0.12.1",
  "ndarray",

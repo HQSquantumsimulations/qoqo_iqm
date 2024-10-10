@@ -1,5 +1,5 @@
 ====================================================
-addr2line 0.24.1
+addr2line 0.24.2
 https://github.com/gimli-rs/addr2line
 by 
 A cross-platform symbolication library written in Rust, using `gimli`
@@ -3640,7 +3640,7 @@ DEALINGS IN THE SOFTWARE.
 
 
 ====================================================
-cc 1.1.24
+cc 1.1.28
 https://github.com/rust-lang/cc-rs
 by Alex Crichton <alex@alexcrichton.com>
 A build-time dependency for Cargo build scripts to assist in invoking the native
@@ -8200,7 +8200,7 @@ limitations under the License.
 
 
 ====================================================
-futures-channel 0.3.30
+futures-channel 0.3.31
 https://rust-lang.github.io/futures-rs
 by 
 Channels for asynchronous communication using futures-rs.
@@ -8444,7 +8444,7 @@ limitations under the License.
 
 
 ====================================================
-futures-core 0.3.30
+futures-core 0.3.31
 https://rust-lang.github.io/futures-rs
 by 
 The core traits and types in for the `futures` library.
@@ -8688,7 +8688,7 @@ limitations under the License.
 
 
 ====================================================
-futures-io 0.3.30
+futures-io 0.3.31
 https://rust-lang.github.io/futures-rs
 by 
 The `AsyncRead`, `AsyncWrite`, `AsyncSeek`, and `AsyncBufRead` traits for the futures-rs library.
@@ -8932,7 +8932,7 @@ limitations under the License.
 
 
 ====================================================
-futures-sink 0.3.30
+futures-sink 0.3.31
 https://rust-lang.github.io/futures-rs
 by 
 The asynchronous `Sink` trait for the futures-rs library.
@@ -9176,7 +9176,7 @@ limitations under the License.
 
 
 ====================================================
-futures-task 0.3.30
+futures-task 0.3.31
 https://rust-lang.github.io/futures-rs
 by 
 Tools for working with tasks.
@@ -9420,7 +9420,7 @@ limitations under the License.
 
 
 ====================================================
-futures-util 0.3.30
+futures-util 0.3.31
 https://rust-lang.github.io/futures-rs
 by 
 Common utilities and extension traits for the futures-rs library.
@@ -9906,7 +9906,7 @@ limitations under the License.
 
 
 ====================================================
-gimli 0.31.0
+gimli 0.31.1
 https://github.com/gimli-rs/gimli
 by 
 A library for reading and writing the DWARF debugging format.
@@ -12830,7 +12830,7 @@ END OF TERMS AND CONDITIONS
 
 
 ====================================================
-ipnet 2.10.0
+ipnet 2.10.1
 https://github.com/krisprice/ipnet
 by Kris Price <kris@krisprice.nz>
 Provides types and useful methods for working with IPv4 and IPv6 network addresses, commonly called IP prefixes. The new `IpNet`, `Ipv4Net`, and `Ipv6Net` types build on the existing `IpAddr`, `Ipv4Addr`, and `Ipv6Addr` types already provided in Rust's standard library and align to their design to stay consistent. The module also provides useful traits that extend `Ipv4Addr` and `Ipv6Addr` with methods for `Add`, `Sub`, `BitAnd`, and `BitOr` operations. The module only uses stable feature so it is guaranteed to compile using the stable toolchain.
@@ -13985,7 +13985,7 @@ END OF TERMS AND CONDITIONS
 
 
 ====================================================
-js-sys 0.3.70
+js-sys 0.3.71
 https://rustwasm.github.io/wasm-bindgen/
 by The wasm-bindgen Developers
 Bindings for all JS global objects and functions in all JS environments like
@@ -18196,7 +18196,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
 ====================================================
-object 0.36.4
+object 0.36.5
 https://github.com/gimli-rs/object
 by 
 A unified interface for reading and writing object file formats.
@@ -18437,7 +18437,7 @@ limitations under the License.
 
 
 ====================================================
-once_cell 1.20.1
+once_cell 1.20.2
 https://github.com/matklad/once_cell
 by Aleksey Kladov <aleksey.kladov@gmail.com>
 Single assignment cells and lazy values.
@@ -21793,7 +21793,7 @@ limitations under the License.
 
 
 ====================================================
-proc-macro2 1.0.86
+proc-macro2 1.0.87
 https://github.com/dtolnay/proc-macro2
 by David Tolnay <dtolnay@gmail.com>, Alex Crichton <alex@alexcrichton.com>
 A substitute implementation of the compiler's `proc_macro` API to decouple token-based libraries from the procedural macro use case.
@@ -23364,7 +23364,7 @@ LICENSE:
 
 
 ====================================================
-qoqo-iqm 0.10.1
+qoqo-iqm 0.10.2
 https://github.com/HQSquantumsimulations/qoqo_iqm
 by HQS Quantum Simulations <info@quantumsimulations.de>
 IQM backend for qoqo quantum computing toolkit
@@ -27005,7 +27005,7 @@ LICENSE:
 
 
 ====================================================
-roqoqo-iqm 0.10.1
+roqoqo-iqm 0.10.2
 by HQS Quantum Simulations <info@quantumsimulations.de>
 IQM interface for roqoqo rust quantum computing toolkit
 License: Apache-2.0
@@ -28748,7 +28748,7 @@ Permission is granted to anyone to use this software for any purpose, including 
 
 
 ====================================================
-schannel 0.1.24
+schannel 0.1.26
 https://github.com/steffengy/schannel-rs
 by Steven Fackler <sfackler@gmail.com>, Steffen Butzer <steffen.butzer@outlook.com>
 Schannel bindings for rust, allowing SSL/TLS (e.g. https) without openssl
@@ -34478,7 +34478,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 ====================================================
-unicode-bidi 0.3.15
+unicode-bidi 0.3.17
 https://github.com/servo/unicode-bidi
 by The Servo Project Developers
 Implementation of the Unicode Bidirectional Algorithm
@@ -36638,7 +36638,7 @@ Software.
 
 
 ====================================================
-wasm-bindgen 0.2.93
+wasm-bindgen 0.2.94
 https://rustwasm.github.io/
 by The wasm-bindgen Developers
 Easy support for interacting between JS and Rust.
@@ -36880,7 +36880,7 @@ limitations under the License.
 
 
 ====================================================
-wasm-bindgen-backend 0.2.93
+wasm-bindgen-backend 0.2.94
 https://rustwasm.github.io/wasm-bindgen/
 by The wasm-bindgen Developers
 Backend code generation of the wasm-bindgen tool
@@ -37122,7 +37122,7 @@ limitations under the License.
 
 
 ====================================================
-wasm-bindgen-futures 0.4.43
+wasm-bindgen-futures 0.4.44
 https://rustwasm.github.io/wasm-bindgen/
 by The wasm-bindgen Developers
 Bridging the gap between Rust Futures and JavaScript Promises
@@ -37363,7 +37363,7 @@ limitations under the License.
 
 
 ====================================================
-wasm-bindgen-macro 0.2.93
+wasm-bindgen-macro 0.2.94
 https://rustwasm.github.io/wasm-bindgen/
 by The wasm-bindgen Developers
 Definition of the `#[wasm_bindgen]` attribute, an internal dependency
@@ -37605,7 +37605,7 @@ limitations under the License.
 
 
 ====================================================
-wasm-bindgen-macro-support 0.2.93
+wasm-bindgen-macro-support 0.2.94
 https://rustwasm.github.io/wasm-bindgen/
 by The wasm-bindgen Developers
 The part of the implementation of the `#[wasm_bindgen]` attribute that is not in the shared backend crate
@@ -37847,7 +37847,7 @@ limitations under the License.
 
 
 ====================================================
-wasm-bindgen-shared 0.2.93
+wasm-bindgen-shared 0.2.94
 https://rustwasm.github.io/wasm-bindgen/
 by The wasm-bindgen Developers
 Shared support between wasm-bindgen and wasm-bindgen cli, an internal
@@ -38090,7 +38090,7 @@ limitations under the License.
 
 
 ====================================================
-web-sys 0.3.70
+web-sys 0.3.71
 https://rustwasm.github.io/wasm-bindgen/web-sys/index.html
 by The wasm-bindgen Developers
 Bindings for all Web APIs, a procedurally generated crate from WebIDL
