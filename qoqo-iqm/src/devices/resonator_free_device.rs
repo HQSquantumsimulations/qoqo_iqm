@@ -45,19 +45,16 @@ impl ResonatorFreeDeviceWrapper {
     ///
     /// Raises:
     ///     PyTypeError: Something went wrong during the downcasting.
-    pub fn from_pyany(input: Py<PyAny>) -> PyResult<ResonatorFreeDevice> {
-        Python::with_gil(|py| -> PyResult<ResonatorFreeDevice> {
-            let input = input.bind(py);
-            if let Ok(try_downcast) = input.extract::<ResonatorFreeDeviceWrapper>() {
-                Ok(try_downcast.internal)
-            } else {
-                Err(PyTypeError::new_err(
-                    "Python object cannot be converted to IQM ResonatorFreeDevice: Cast to binary \
+    pub fn from_pyany(input: &Bound<PyAny>) -> PyResult<ResonatorFreeDevice> {
+        if let Ok(try_downcast) = input.extract::<ResonatorFreeDeviceWrapper>() {
+            Ok(try_downcast.internal)
+        } else {
+            Err(PyTypeError::new_err(
+                "Python object cannot be converted to IQM ResonatorFreeDevice: Cast to binary \
                      representation failed"
-                        .to_string(),
-                ))
-            }
-        })
+                    .to_string(),
+            ))
+        }
     }
 }
 
@@ -83,7 +80,7 @@ impl ResonatorFreeDeviceWrapper {
     ///
     /// Returns:
     ///     ResonatorFreeDevice: A deep copy of self.
-    pub fn __deepcopy__(&self, _memodict: Py<PyAny>) -> ResonatorFreeDeviceWrapper {
+    pub fn __deepcopy__(&self, _memodict: &Bound<PyAny>) -> ResonatorFreeDeviceWrapper {
         self.clone()
     }
 

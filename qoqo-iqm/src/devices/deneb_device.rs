@@ -45,19 +45,16 @@ impl DenebDeviceWrapper {
     ///
     /// Raises:
     ///     PyTypeError: Something went wrong during the downcasting.
-    pub fn from_pyany(input: Py<PyAny>) -> PyResult<DenebDevice> {
-        Python::with_gil(|py| -> PyResult<DenebDevice> {
-            let input = input.bind(py);
-            if let Ok(try_downcast) = input.extract::<DenebDeviceWrapper>() {
-                Ok(try_downcast.internal)
-            } else {
-                Err(PyTypeError::new_err(
-                    "Python object cannot be converted to IQM DenebDevice: Cast to binary \
+    pub fn from_pyany(input: &Bound<PyAny>) -> PyResult<DenebDevice> {
+        if let Ok(try_downcast) = input.extract::<DenebDeviceWrapper>() {
+            Ok(try_downcast.internal)
+        } else {
+            Err(PyTypeError::new_err(
+                "Python object cannot be converted to IQM DenebDevice: Cast to binary \
                      representation failed"
-                        .to_string(),
-                ))
-            }
-        })
+                    .to_string(),
+            ))
+        }
     }
 }
 
@@ -91,7 +88,7 @@ impl DenebDeviceWrapper {
     ///
     /// Returns:
     ///     DenebDevice: A deep copy of self.
-    pub fn __deepcopy__(&self, _memodict: Py<PyAny>) -> DenebDeviceWrapper {
+    pub fn __deepcopy__(&self, _memodict: &Bound<PyAny>) -> DenebDeviceWrapper {
         self.clone()
     }
 

@@ -46,34 +46,31 @@ impl BackendWrapper {
     ///
     /// Args:
     ///     input (Backend): The Python object that should be casted to a [roqoqo_iqm::Backend]
-    pub fn from_pyany(input: PyObject) -> PyResult<Backend> {
-        Python::with_gil(|py| -> PyResult<Backend> {
-            let input = input.bind(py);
-            if let Ok(try_downcast) = input.extract::<BackendWrapper>() {
-                Ok(try_downcast.internal)
-            } else {
-                let get_bytes = input.call_method0("to_bincode").map_err(|_| {
-                    PyTypeError::new_err(
-                        "Python object cannot be converted to IQM Backend: Cast to binary \
+    pub fn from_pyany(input: &Bound<PyAny>) -> PyResult<Backend> {
+        if let Ok(try_downcast) = input.extract::<BackendWrapper>() {
+            Ok(try_downcast.internal)
+        } else {
+            let get_bytes = input.call_method0("to_bincode").map_err(|_| {
+                PyTypeError::new_err(
+                    "Python object cannot be converted to IQM Backend: Cast to binary \
                          representation failed"
-                            .to_string(),
-                    )
-                })?;
-                let bytes = get_bytes.extract::<Vec<u8>>().map_err(|_| {
-                    PyTypeError::new_err(
-                        "Python object cannot be converted to IQM Backend: Cast to binary \
+                        .to_string(),
+                )
+            })?;
+            let bytes = get_bytes.extract::<Vec<u8>>().map_err(|_| {
+                PyTypeError::new_err(
+                    "Python object cannot be converted to IQM Backend: Cast to binary \
                      representation failed"
-                            .to_string(),
-                    )
-                })?;
-                deserialize(&bytes[..]).map_err(|err| {
-                    PyTypeError::new_err(format!(
+                        .to_string(),
+                )
+            })?;
+            deserialize(&bytes[..]).map_err(|err| {
+                PyTypeError::new_err(format!(
                     "Python object cannot be converted to IQM Backend: Deserialization failed: {}",
                     err
                 ))
-                })
-            }
-        })
+            })
+        }
     }
 }
 
@@ -94,11 +91,12 @@ impl BackendWrapper {
     pub fn new(device: &Bound<PyAny>, access_token: Option<String>) -> PyResult<Self> {
         let iqm_device: IqmDevice;
         let device_pyany = device.as_gil_ref();
-        if let Ok(dev) = DenebDeviceWrapper::from_pyany(device_pyany.into()) {
+        if let Ok(dev) = DenebDeviceWrapper::from_pyany(&device_pyany.as_borrowed()) {
             iqm_device = IqmDevice::from(dev);
-        } else if let Ok(dev) = GarnetDeviceWrapper::from_pyany(device_pyany.into()) {
+        } else if let Ok(dev) = GarnetDeviceWrapper::from_pyany(&device_pyany.as_borrowed()) {
             iqm_device = IqmDevice::from(dev);
-        } else if let Ok(dev) = ResonatorFreeDeviceWrapper::from_pyany(device_pyany.into()) {
+        } else if let Ok(dev) = ResonatorFreeDeviceWrapper::from_pyany(&device_pyany.as_borrowed())
+        {
             iqm_device = IqmDevice::from(dev);
         } else {
             return Err(PyRuntimeError::new_err(
@@ -137,7 +135,7 @@ impl BackendWrapper {
     ///
     /// Returns:
     ///     Backend: A deep copy of self.
-    pub fn __deepcopy__(&self, _memodict: Py<PyAny>) -> BackendWrapper {
+    pub fn __deepcopy__(&self, _memodict: &Bound<PyAny>) -> BackendWrapper {
         self.clone()
     }
 
