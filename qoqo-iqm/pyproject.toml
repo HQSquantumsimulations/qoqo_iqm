@@ -30,6 +30,7 @@ bindings = "pyo3"
 compatibility = "manylinux2014"
 strip = true
 profile = "release"
+include = [{ path = "LICENSE", format = "sdist" }]
 
 [tool.mypy]
 ignore_missing_imports = true
