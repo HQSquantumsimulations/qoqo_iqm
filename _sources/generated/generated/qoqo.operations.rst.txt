@@ -20,6 +20,7 @@ qoqo.operations
       ControlledPhaseShift
       ControlledRotateX
       ControlledRotateXY
+      ControlledSWAP
       DefinitionBit
       DefinitionComplex
       DefinitionFloat
@@ -36,13 +37,17 @@ qoqo.operations
       Identity
       InputBit
       InputSymbolic
+      InvSGate
+      InvSXGate
       InvSqrtISwap
       InvSqrtPauliX
       InvSqrtPauliY
+      InvTGate
       JaynesCummings
       LongitudinalCoupling
       MeasureQubit
       MolmerSorensenXX
+      MultiQubitCNOT
       MultiQubitMS
       MultiQubitZZ
       PMInteraction
@@ -53,6 +58,8 @@ qoqo.operations
       PhaseShift
       PhaseShiftState0
       PhaseShiftState1
+      PhaseShiftedControlledControlledPhase
+      PhaseShiftedControlledControlledZ
       PhaseShiftedControlledPhase
       PhaseShiftedControlledZ
       PhotonDetection
@@ -83,6 +90,7 @@ qoqo.operations
       PragmaStartDecompositionBlock
       PragmaStopDecompositionBlock
       PragmaStopParallelBlock
+      QFT
       Qsim
       QuantumRabi
       RotateAroundSphericalAxis
@@ -92,6 +100,7 @@ qoqo.operations
       RotateZ
       SGate
       SWAP
+      SXGate
       SingleExcitationLoad
       SingleExcitationStore
       SingleQubitGate
@@ -102,6 +111,9 @@ qoqo.operations
       Squeezing
       TGate
       Toffoli
+      TripleControlledPauliX
+      TripleControlledPauliZ
+      TripleControlledPhaseShift
       VariableMSXX
       XY
    

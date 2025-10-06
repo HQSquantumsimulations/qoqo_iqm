@@ -6,15 +6,15 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>qoqo.Circuit &mdash; qoqo-iqm 0.10.2 documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+  <title>qoqo.Circuit &mdash; qoqo-iqm 0.11.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
 
   
       <script src="../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../_static/documentation_options.js?v=b2d9cc31"></script>
-      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/documentation_options.js?v=2be149cb"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="../../_static/js/theme.js"></script>
@@ -58,6 +58,7 @@
 <li><a class="reference internal" href="#qoqo.Circuit.get_slice"><code class="docutils literal notranslate"><span class="pre">Circuit.get_slice()</span></code></a></li>
 <li><a class="reference internal" href="#qoqo.Circuit.json_schema"><code class="docutils literal notranslate"><span class="pre">Circuit.json_schema()</span></code></a></li>
 <li><a class="reference internal" href="#qoqo.Circuit.min_supported_version"><code class="docutils literal notranslate"><span class="pre">Circuit.min_supported_version()</span></code></a></li>
+<li><a class="reference internal" href="#qoqo.Circuit.number_of_qubits"><code class="docutils literal notranslate"><span class="pre">Circuit.number_of_qubits()</span></code></a></li>
 <li><a class="reference internal" href="#qoqo.Circuit.operations"><code class="docutils literal notranslate"><span class="pre">Circuit.operations()</span></code></a></li>
 <li><a class="reference internal" href="#qoqo.Circuit.overrotate"><code class="docutils literal notranslate"><span class="pre">Circuit.overrotate()</span></code></a></li>
 <li><a class="reference internal" href="#qoqo.Circuit.remap_qubits"><code class="docutils literal notranslate"><span class="pre">Circuit.remap_qubits()</span></code></a></li>
@@ -148,22 +149,25 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="../qoqo.html#qoqo.Circuit.min_supported_version" title="qoqo.Circuit.min_supported_version"><code class="xref py py-obj docutils literal notranslate"><span class="pre">min_supported_version</span></code></a>()</p></td>
 <td><p>Return the minimum version of qoqo that supports this object.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../qoqo.html#qoqo.Circuit.operations" title="qoqo.Circuit.operations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">operations</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../qoqo.html#qoqo.Circuit.number_of_qubits" title="qoqo.Circuit.number_of_qubits"><code class="xref py py-obj docutils literal notranslate"><span class="pre">number_of_qubits</span></code></a>()</p></td>
+<td><p>Return the number of qubits in the Circuit.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../qoqo.html#qoqo.Circuit.operations" title="qoqo.Circuit.operations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">operations</span></code></a>()</p></td>
 <td><p>Return a list of all operations in the Circuit.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../qoqo.html#qoqo.Circuit.overrotate" title="qoqo.Circuit.overrotate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">overrotate</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../qoqo.html#qoqo.Circuit.overrotate" title="qoqo.Circuit.overrotate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">overrotate</span></code></a>()</p></td>
 <td><p>Return clone of the circuit with all overrotation Pragmas applied.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../qoqo.html#qoqo.Circuit.remap_qubits" title="qoqo.Circuit.remap_qubits"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remap_qubits</span></code></a>(mapping)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../qoqo.html#qoqo.Circuit.remap_qubits" title="qoqo.Circuit.remap_qubits"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remap_qubits</span></code></a>(mapping)</p></td>
 <td><p>Remap qubits in operations in clone of Circuit.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../qoqo.html#qoqo.Circuit.substitute_parameters" title="qoqo.Circuit.substitute_parameters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">substitute_parameters</span></code></a>(substitution_parameters)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../qoqo.html#qoqo.Circuit.substitute_parameters" title="qoqo.Circuit.substitute_parameters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">substitute_parameters</span></code></a>(substitution_parameters)</p></td>
 <td><p>Substitute the symbolic parameters in a clone of the Circuit according to the substitution_parameters input.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../qoqo.html#qoqo.Circuit.to_bincode" title="qoqo.Circuit.to_bincode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_bincode</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../qoqo.html#qoqo.Circuit.to_bincode" title="qoqo.Circuit.to_bincode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_bincode</span></code></a>()</p></td>
 <td><p>Return the bincode representation of the Circuit using the [bincode] crate.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../qoqo.html#qoqo.Circuit.to_json" title="qoqo.Circuit.to_json"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_json</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../qoqo.html#qoqo.Circuit.to_json" title="qoqo.Circuit.to_json"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_json</span></code></a>()</p></td>
 <td><p>Return the json representation of the Circuit.</p></td>
 </tr>
 </tbody>
@@ -370,6 +374,20 @@
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="qoqo.Circuit.number_of_qubits">
+<span class="sig-name descname"><span class="pre">number_of_qubits</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#qoqo.Circuit.number_of_qubits" title="Link to this definition"></a></dt>
+<dd><p>Return the number of qubits in the Circuit.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The number of qubits in the Circuit.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
 </dd>
 </dl>
 </dd></dl>
