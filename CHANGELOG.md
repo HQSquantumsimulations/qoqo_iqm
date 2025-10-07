@@ -4,6 +4,10 @@ This changelog tracks changes to the qoqo_iqm project starting at version 0.1.0.
 
 ## Not released
 
+## 0.11.2
+
+* Fix the license in pyproject.toml.
+
 ## 0.11.1
 
 * Use Rust tls instead of the openssl one, as it was causing an error during deployments.

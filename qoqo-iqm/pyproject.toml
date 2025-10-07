@@ -1,11 +1,11 @@
 [project]
 name = "qoqo-iqm"
-license = { text = "Proprietary. See LICENSE file included in delivery." }
+license = { text = "Apache-2.0 AND Apache-2.0 with LLVM-exception AND MIT AND Unicode-DFS-2016 AND BSD-2-Clause AND BSD-3-CLause" }
 maintainers = [
     { name = "HQS Quantum Simulations GmbH", email = "info@quantumsimulations.de" },
 ]
 requires-python = ">=3.10"
-version = "0.11.1"
+version = "0.11.2"
 dependencies = ['numpy', 'qoqo_calculator_pyo3>=1.7,<1.8', 'qoqo>=1.21']
 
 [project.optional-dependencies]
@@ -30,6 +30,7 @@ bindings = "pyo3"
 compatibility = "manylinux2014"
 strip = true
 profile = "release"
+include = [{ path = "LICENSE", format = "sdist" }]
 
 [tool.mypy]
 ignore_missing_imports = true
